@@ -36,4 +36,8 @@ The first shared masternode service with profitsharing! <p>
 <td>RPC Port</td>
 <td>14550</td>
 </tr>
+<tr>
+<td>Rewardsplit</td>
+<td>80% Masternodes & 20 % Staking</td>
+</tr>  
 </tbody>
