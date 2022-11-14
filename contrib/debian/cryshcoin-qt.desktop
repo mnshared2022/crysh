@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=crysh Coin
+Comment=cryshcoin P2P Cryptocurrency
+Comment[fr]=cryshcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=cryshcoin, eşten eşe kriptografik sanal para birimi
+Exec=cryshcoin-qt %u
+Terminal=false
+Type=Application
+Icon=cryshcoin128
+MimeType=x-scheme-handler/cryshcoin;
+Categories=Office;Finance;
+StartupWMClass=cryshcoin-qt

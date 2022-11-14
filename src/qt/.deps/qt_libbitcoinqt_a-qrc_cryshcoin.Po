@@ -1,0 +1,1 @@
+qt/qt_libbitcoinqt_a-qrc_cryshcoin.o: qt/qrc_cryshcoin.cpp

@@ -1,0 +1,55 @@
+compat/libbitcoin_util_a-strnlen.o: compat/strnlen.cpp \
+  config/cryshcoin-config.h \
+  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstring \
+  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h \
+  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h
+
+config/cryshcoin-config.h:
+
+/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstring:
+
+/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h:
+
+/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h:

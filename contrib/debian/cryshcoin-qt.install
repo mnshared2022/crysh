@@ -1,0 +1,6 @@
+usr/local/bin/cryshcoin-qt usr/bin
+share/pixmaps/cryshcoin32.xpm usr/share/pixmaps
+share/pixmaps/cryshcoin16.xpm usr/share/pixmaps
+share/pixmaps/cryshcoin128.png usr/share/pixmaps
+debian/cryshcoin-qt.desktop usr/share/applications
+debian/cryshcoin-qt.protocol usr/share/kde4/services/

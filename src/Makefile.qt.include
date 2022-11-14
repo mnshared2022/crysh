@@ -1,0 +1,851 @@
+# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Distributed under the MIT software license, see the accompanying
+# file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+bin_PROGRAMS += qt/cryshcoin-qt
+EXTRA_LIBRARIES += qt/libbitcoinqt.a
+
+# cryshcoin qt core #
+QT_TS = \
+  qt/locale/cryshcoin_bg.ts \
+  qt/locale/cryshcoin_ca.ts \
+  qt/locale/cryshcoin_cs.ts \
+  qt/locale/cryshcoin_da.ts \
+  qt/locale/cryshcoin_de.ts \
+  qt/locale/cryshcoin_en.ts \
+  qt/locale/cryshcoin_en_GB.ts \
+  qt/locale/cryshcoin_en_US.ts \
+  qt/locale/cryshcoin_eo.ts \
+  qt/locale/cryshcoin_es.ts \
+  qt/locale/cryshcoin_es_ES.ts \
+  qt/locale/cryshcoin_fi.ts \
+  qt/locale/cryshcoin_fr_FR.ts \
+  qt/locale/cryshcoin_hi_IN.ts \
+  qt/locale/cryshcoin_hr.ts \
+  qt/locale/cryshcoin_hr_HR.ts \
+  qt/locale/cryshcoin_it.ts \
+  qt/locale/cryshcoin_ja.ts \
+  qt/locale/cryshcoin_ko_KR.ts \
+  qt/locale/cryshcoin_lt_LT.ts \
+  qt/locale/cryshcoin_nl.ts \
+  qt/locale/cryshcoin_pl.ts \
+  qt/locale/cryshcoin_pt.ts \
+  qt/locale/cryshcoin_pt_BR.ts \
+  qt/locale/cryshcoin_ro_RO.ts \
+  qt/locale/cryshcoin_ru.ts \
+  qt/locale/cryshcoin_sk.ts \
+  qt/locale/cryshcoin_sv.ts \
+  qt/locale/cryshcoin_tr.ts \
+  qt/locale/cryshcoin_uk.ts \
+  qt/locale/cryshcoin_vi.ts \
+  qt/locale/cryshcoin_zh_CN.ts \
+  qt/locale/cryshcoin_zh_TW.ts
+
+QT_FORMS_UI = \
+  qt/forms/addressbookpage.ui \
+  qt/forms/askpassphrasedialog.ui \
+  qt/forms/coincontroldialog.ui \
+  qt/forms/blockexplorer.ui \
+  qt/forms/editaddressdialog.ui \
+  qt/forms/governancepage.ui \
+  qt/forms/helpmessagedialog.ui \
+  qt/forms/intro.ui \
+  qt/forms/openuridialog.ui \
+  qt/forms/optionsdialog.ui \
+  qt/forms/rpcconsole.ui \
+  qt/cryshcoin/forms/loadingdialog.ui \
+  qt/forms/zcryshcontroldialog.ui \
+  qt/cryshcoin/forms/snackbar.ui \
+  qt/cryshcoin/forms/navmenuwidget.ui \
+  qt/cryshcoin/forms/lockunlock.ui \
+  qt/cryshcoin/forms/expandablebutton.ui \
+  qt/cryshcoin/forms/receivedialog.ui \
+  qt/cryshcoin/forms/walletpassworddialog.ui \
+  qt/cryshcoin/forms/topbar.ui \
+  qt/cryshcoin/forms/txrow.ui \
+  qt/cryshcoin/forms/dashboardwidget.ui \
+  qt/cryshcoin/forms/coincontrolcryshwidget.ui \
+  qt/cryshcoin/forms/addresslabelrow.ui \
+  qt/cryshcoin/forms/contactdropdownrow.ui \
+  qt/cryshcoin/forms/mninfodialog.ui \
+  qt/cryshcoin/forms/optionbutton.ui \
+  qt/cryshcoin/forms/masternodewizarddialog.ui \
+  qt/cryshcoin/forms/mnrow.ui \
+  qt/cryshcoin/forms/masternodeswidget.ui \
+  qt/cryshcoin/forms/myaddressrow.ui \
+  qt/cryshcoin/forms/csrow.ui \
+  qt/cryshcoin/forms/sendchangeaddressdialog.ui \
+  qt/cryshcoin/forms/sendconfirmdialog.ui \
+  qt/cryshcoin/forms/sendcustomfeedialog.ui \
+  qt/cryshcoin/forms/sendchangeaddressdialog.ui \
+  qt/cryshcoin/forms/sendmultirow.ui \
+  qt/cryshcoin/forms/send.ui \
+  qt/cryshcoin/forms/addnewaddressdialog.ui \
+  qt/cryshcoin/forms/addnewcontactdialog.ui \
+  qt/cryshcoin/forms/requestdialog.ui \
+  qt/cryshcoin/forms/receivewidget.ui \
+  qt/cryshcoin/forms/tooltipmenu.ui \
+  qt/cryshcoin/forms/addresseswidget.ui \
+  qt/cryshcoin/forms/defaultdialog.ui \
+  qt/cryshcoin/forms/denomgenerationdialog.ui \
+  qt/cryshcoin/forms/privacywidget.ui \
+  qt/cryshcoin/forms/coldstakingwidget.ui \
+  qt/cryshcoin/settings/forms/settingsbackupwallet.ui \
+  qt/cryshcoin/settings/forms/settingsbittoolwidget.ui \
+  qt/cryshcoin/settings/forms/settingsconsolewidget.ui \
+  qt/cryshcoin/settings/forms/settingsdisplayoptionswidget.ui \
+  qt/cryshcoin/settings/forms/settingsfaqwidget.ui \
+  qt/cryshcoin/settings/forms/settingsinformationwidget.ui \
+  qt/cryshcoin/settings/forms/settingsmainoptionswidget.ui \
+  qt/cryshcoin/settings/forms/settingsmultisenddialog.ui \
+  qt/cryshcoin/settings/forms/settingsmultisendwidget.ui \
+  qt/cryshcoin/settings/forms/settingssignmessagewidgets.ui \
+  qt/cryshcoin/settings/forms/settingswalletoptionswidget.ui \
+  qt/cryshcoin/settings/forms/settingswalletrepairwidget.ui \
+  qt/cryshcoin/settings/forms/settingswidget.ui \
+  qt/cryshcoin/forms/welcomecontentwidget.ui \
+  qt/cryshcoin/forms/splash.ui
+
+QT_MOC_CPP = \
+  qt/moc_addressbookpage.cpp \
+  qt/moc_addresstablemodel.cpp \
+  qt/moc_askpassphrasedialog.cpp \
+  qt/moc_bantablemodel.cpp \
+  qt/moc_bitcoinaddressvalidator.cpp \
+  qt/moc_bitcoinamountfield.cpp \
+  qt/cryshcoin/moc_cryshcoingui.cpp \
+  qt/moc_bitcoinunits.cpp \
+  qt/moc_blockexplorer.cpp \
+  qt/moc_clientmodel.cpp \
+  qt/moc_coincontroldialog.cpp \
+  qt/moc_coincontroltreewidget.cpp \
+  qt/moc_csvmodelwriter.cpp \
+  qt/moc_editaddressdialog.cpp \
+  qt/moc_governancepage.cpp \
+  qt/moc_guiutil.cpp \
+  qt/moc_intro.cpp \
+  qt/moc_macdockiconhandler.cpp \
+  qt/moc_macnotificationhandler.cpp \
+  qt/moc_notificator.cpp \
+  qt/moc_openuridialog.cpp \
+  qt/moc_optionsdialog.cpp \
+  qt/moc_optionsmodel.cpp \
+  qt/moc_peertablemodel.cpp \
+  qt/moc_paymentserver.cpp \
+  qt/moc_qvalidatedlineedit.cpp \
+  qt/moc_qvaluecombobox.cpp \
+  qt/moc_proposalframe.cpp \
+  qt/moc_recentrequeststablemodel.cpp \
+  qt/moc_rpcconsole.cpp \
+  qt/moc_splashscreen.cpp \
+  qt/moc_trafficgraphwidget.cpp \
+  qt/moc_transactiondesc.cpp \
+  qt/moc_transactionfilterproxy.cpp \
+  qt/moc_transactiontablemodel.cpp \
+  qt/moc_utilitydialog.cpp \
+  qt/moc_walletmodel.cpp \
+  qt/cryshcoin/moc_loadingdialog.cpp \
+  qt/moc_zcryshcontroldialog.cpp \
+  qt/cryshcoin/moc_pwidget.cpp \
+  qt/cryshcoin/moc_snackbar.cpp \
+  qt/cryshcoin/moc_navmenuwidget.cpp \
+  qt/cryshcoin/moc_lockunlock.cpp \
+  qt/cryshcoin/moc_expandablebutton.cpp \
+  qt/cryshcoin/moc_furabstractlistitemdelegate.cpp \
+  qt/cryshcoin/moc_receivedialog.cpp \
+  qt/cryshcoin/moc_walletpassworddialog.cpp \
+  qt/cryshcoin/moc_pfborderimage.cpp \
+  qt/cryshcoin/moc_topbar.cpp \
+  qt/cryshcoin/moc_txrow.cpp \
+  qt/cryshcoin/moc_dashboardwidget.cpp \
+  qt/cryshcoin/moc_coincontrolcryshwidget.cpp \
+  qt/cryshcoin/moc_addresslabelrow.cpp \
+  qt/cryshcoin/moc_contactdropdownrow.cpp \
+  qt/cryshcoin/moc_mninfodialog.cpp \
+  qt/cryshcoin/moc_optionbutton.cpp \
+  qt/cryshcoin/moc_coldstakingmodel.cpp \
+  qt/cryshcoin/moc_mnmodel.cpp \
+  qt/cryshcoin/moc_masternodewizarddialog.cpp \
+  qt/cryshcoin/moc_mnrow.cpp \
+  qt/cryshcoin/moc_masternodeswidget.cpp \
+  qt/cryshcoin/moc_myaddressrow.cpp \
+  qt/cryshcoin/moc_csrow.cpp \
+  qt/cryshcoin/moc_contactsdropdown.cpp \
+  qt/cryshcoin/moc_sendchangeaddressdialog.cpp \
+  qt/cryshcoin/moc_sendconfirmdialog.cpp \
+  qt/cryshcoin/moc_sendcustomfeedialog.cpp \
+  qt/cryshcoin/moc_sendchangeaddressdialog.cpp \
+  qt/cryshcoin/moc_sendmultirow.cpp \
+  qt/cryshcoin/moc_send.cpp \
+  qt/cryshcoin/moc_addnewaddressdialog.cpp \
+  qt/cryshcoin/moc_addnewcontactdialog.cpp \
+  qt/cryshcoin/moc_requestdialog.cpp \
+  qt/cryshcoin/moc_receivewidget.cpp \
+  qt/cryshcoin/moc_tooltipmenu.cpp \
+  qt/cryshcoin/moc_addresseswidget.cpp \
+  qt/cryshcoin/moc_defaultdialog.cpp \
+  qt/cryshcoin/moc_denomgenerationdialog.cpp \
+  qt/cryshcoin/moc_privacywidget.cpp \
+  qt/cryshcoin/moc_coldstakingwidget.cpp \
+  qt/cryshcoin/settings/moc_settingsbackupwallet.cpp \
+  qt/cryshcoin/settings/moc_settingsbittoolwidget.cpp \
+  qt/cryshcoin/settings/moc_settingsconsolewidget.cpp \
+  qt/cryshcoin/settings/moc_settingsdisplayoptionswidget.cpp \
+  qt/cryshcoin/settings/moc_settingsfaqwidget.cpp \
+  qt/cryshcoin/settings/moc_settingsinformationwidget.cpp \
+  qt/cryshcoin/settings/moc_settingsmainoptionswidget.cpp \
+  qt/cryshcoin/settings/moc_settingsmultisenddialog.cpp \
+  qt/cryshcoin/settings/moc_settingsmultisendwidget.cpp \
+  qt/cryshcoin/settings/moc_settingssignmessagewidgets.cpp \
+  qt/cryshcoin/settings/moc_settingswalletoptionswidget.cpp \
+  qt/cryshcoin/settings/moc_settingswalletrepairwidget.cpp \
+  qt/cryshcoin/settings/moc_settingswidget.cpp \
+  qt/cryshcoin/moc_welcomecontentwidget.cpp \
+  qt/cryshcoin/moc_splash.cpp
+
+BITCOIN_MM = \
+  qt/macdockiconhandler.mm \
+  qt/macnotificationhandler.mm
+
+QT_MOC = \
+  qt/cryshcoin.moc \
+  qt/bitcoinamountfield.moc \
+  qt/intro.moc \
+  qt/rpcconsole.moc \
+  qt/cryshcoin/settings/moc_settingsconsolewidget.cpp
+
+QT_QRC_CPP = qt/qrc_cryshcoin.cpp
+QT_QRC = qt/cryshcoin.qrc
+QT_QRC_LOCALE_CPP = qt/qrc_cryshcoin_locale.cpp
+QT_QRC_LOCALE = qt/cryshcoin_locale.qrc
+
+PROTOBUF_CC = qt/paymentrequest.pb.cc
+PROTOBUF_H = qt/paymentrequest.pb.h
+PROTOBUF_PROTO = qt/paymentrequest.proto
+
+BITCOIN_QT_H = \
+  qt/addressbookpage.h \
+  qt/addresstablemodel.h \
+  qt/askpassphrasedialog.h \
+  qt/bantablemodel.h \
+  qt/bitcoinaddressvalidator.h \
+  qt/bitcoinamountfield.h \
+  qt/cryshcoin/cryshcoingui.h \
+  qt/bitcoinunits.h \
+  qt/blockexplorer.h \
+  qt/clientmodel.h \
+  qt/coincontroldialog.h \
+  qt/coincontroltreewidget.h \
+  qt/csvmodelwriter.h \
+  qt/editaddressdialog.h \
+  qt/governancepage.h \
+  qt/guiconstants.h \
+  qt/guiutil.h \
+  qt/intro.h \
+  qt/macdockiconhandler.h \
+  qt/macnotificationhandler.h \
+  qt/networkstyle.h \
+  qt/notificator.h \
+  qt/openuridialog.h \
+  qt/optionsdialog.h \
+  qt/optionsmodel.h \
+  qt/paymentrequestplus.h \
+  qt/paymentserver.h \
+  qt/peertablemodel.h \
+  qt/platformstyle.h \
+  qt/proposalframe.h \
+  qt/qvalidatedlineedit.h \
+  qt/qvaluecombobox.h \
+  qt/recentrequeststablemodel.h \
+  qt/rpcconsole.h \
+  qt/splashscreen.h \
+  qt/trafficgraphwidget.h \
+  qt/transactiondesc.h \
+  qt/transactionfilterproxy.h \
+  qt/transactionrecord.h \
+  qt/transactiontablemodel.h \
+  qt/utilitydialog.h \
+  qt/walletmodel.h \
+  qt/walletmodeltransaction.h \
+  qt/cryshcoin/prunnable.h \
+  qt/cryshcoin/pfborderimage.h \
+  qt/cryshcoin/loadingdialog.h \
+  qt/winshutdownmonitor.h \
+  qt/zcryshcontroldialog.h \
+  qt/cryshcoin/pwidget.h \
+  qt/cryshcoin/guitransactionsutils.h \
+  qt/cryshcoin/snackbar.h \
+  qt/cryshcoin/navmenuwidget.h \
+  qt/cryshcoin/lockunlock.h \
+  qt/cryshcoin/receivedialog.h \
+  qt/cryshcoin/furlistrow.h \
+  qt/cryshcoin/furabstractlistitemdelegate.h \
+  qt/cryshcoin/txviewholder.h \
+  qt/cryshcoin/qtutils.h \
+  qt/cryshcoin/expandablebutton.h \
+  qt/cryshcoin/walletpassworddialog.h \
+  qt/cryshcoin/topbar.h \
+  qt/cryshcoin/txrow.h \
+  qt/cryshcoin/addressholder.h \
+  qt/cryshcoin/addressfilterproxymodel.h \
+  qt/cryshcoin/dashboardwidget.h \
+  qt/cryshcoin/coincontrolcryshwidget.h \
+  qt/cryshcoin/addresslabelrow.h \
+  qt/cryshcoin/contactdropdownrow.h \
+  qt/cryshcoin/mninfodialog.h \
+  qt/cryshcoin/optionbutton.h \
+  qt/cryshcoin/coldstakingmodel.h \
+  qt/cryshcoin/mnmodel.h \
+  qt/cryshcoin/masternodewizarddialog.h \
+  qt/cryshcoin/mnrow.h \
+  qt/cryshcoin/masternodeswidget.h \
+  qt/cryshcoin/myaddressrow.h \
+  qt/cryshcoin/csrow.h \
+  qt/cryshcoin/contactsdropdown.h \
+  qt/cryshcoin/sendchangeaddressdialog.h \
+  qt/cryshcoin/sendconfirmdialog.h \
+  qt/cryshcoin/sendcustomfeedialog.h \
+  qt/cryshcoin/sendchangeaddressdialog.h \
+  qt/cryshcoin/sendmultirow.h \
+  qt/cryshcoin/send.h \
+  qt/cryshcoin/addnewaddressdialog.h \
+  qt/cryshcoin/addnewcontactdialog.h \
+  qt/cryshcoin/requestdialog.h \
+  qt/cryshcoin/receivewidget.h \
+  qt/cryshcoin/tooltipmenu.h \
+  qt/cryshcoin/addresseswidget.h \
+  qt/cryshcoin/defaultdialog.h \
+  qt/cryshcoin/denomgenerationdialog.h \
+  qt/cryshcoin/privacywidget.h \
+  qt/cryshcoin/coldstakingwidget.h \
+  qt/cryshcoin/settings/settingsbackupwallet.h \
+  qt/cryshcoin/settings/settingsbittoolwidget.h \
+  qt/cryshcoin/settings/settingsconsolewidget.h \
+  qt/cryshcoin/settings/settingsdisplayoptionswidget.h \
+  qt/cryshcoin/settings/settingsfaqwidget.h \
+  qt/cryshcoin/settings/settingsinformationwidget.h \
+  qt/cryshcoin/settings/settingsmainoptionswidget.h \
+  qt/cryshcoin/settings/settingsmultisenddialog.h \
+  qt/cryshcoin/settings/settingsmultisendwidget.h \
+  qt/cryshcoin/settings/settingssignmessagewidgets.h \
+  qt/cryshcoin/settings/settingswalletoptionswidget.h \
+  qt/cryshcoin/settings/settingswalletrepairwidget.h \
+  qt/cryshcoin/settings/settingswidget.h \
+  qt/cryshcoin/welcomecontentwidget.h \
+  qt/cryshcoin/splash.h
+
+RES_ICONS = \
+  qt/res/icons/add.png \
+  qt/res/icons/address-book.png \
+  qt/res/icons/automint_active.png \
+  qt/res/icons/automint_inactive.png \
+  qt/res/icons/bitcoin.ico \
+  qt/res/icons/bitcoin.png \
+  qt/res/icons/bitcoin_testnet.ico \
+  qt/res/icons/bitcoin_testnet.png \
+  qt/res/icons/bitcoin_regtest.png \
+  qt/res/icons/browse.png \
+  qt/res/icons/clock1.png \
+  qt/res/icons/clock2.png \
+  qt/res/icons/clock3.png \
+  qt/res/icons/clock4.png \
+  qt/res/icons/clock5.png \
+  qt/res/icons/configure.png \
+  qt/res/icons/connect0_16.png \
+  qt/res/icons/connect1_16.png \
+  qt/res/icons/connect2_16.png \
+  qt/res/icons/connect3_16.png \
+  qt/res/icons/connect4_16.png \
+  qt/res/icons/debugwindow.png \
+  qt/res/icons/edit.png \
+  qt/res/icons/editcopy.png \
+  qt/res/icons/editpaste.png \
+  qt/res/icons/explorer.png \
+  qt/res/icons/export.png \
+  qt/res/icons/eye.png \
+  qt/res/icons/eye_minus.png \
+  qt/res/icons/eye_plus.png \
+  qt/res/icons/filesave.png \
+  qt/res/icons/history.png \
+  qt/res/icons/key.png \
+  qt/res/icons/lock_closed.png \
+  qt/res/icons/lock_open.png \
+  qt/res/icons/masternodes.png \
+  qt/res/icons/onion.png \
+  qt/res/icons/overview.png \
+  qt/res/icons/qrcode.png \
+  qt/res/icons/quit.png \
+  qt/res/icons/receive.png \
+  qt/res/icons/receive_dark.png \
+  qt/res/icons/privacy.png \
+  qt/res/icons/remove.png \
+  qt/res/icons/send.png \
+  qt/res/icons/send_dark.png \
+  qt/res/icons/governance.png \
+  qt/res/icons/governance_dark.png \
+  qt/res/icons/staking_active.png \
+  qt/res/icons/staking_inactive.png \
+  qt/res/icons/synced.png \
+  qt/res/icons/trade.png \
+  qt/res/icons/transaction0.png \
+  qt/res/icons/transaction2.png \
+  qt/res/icons/transaction_conflicted.png \
+  qt/res/icons/tx_inout.png \
+  qt/res/icons/tx_input.png \
+  qt/res/icons/tx_output.png \
+  qt/res/icons/tx_mined.png \
+  qt/res/icons/ic-transaction-received.png \
+  qt/res/icons/ic-transaction-mint.png \
+  qt/res/icons/ic-transaction-sent.png \
+  qt/res/icons/ic-transaction-staked.png \
+  qt/res/icons/unit_cryshcoin.png \
+  qt/res/icons/unit_mcryshcoin.png \
+  qt/res/icons/unit_ucryshcoin.png \
+  qt/res/icons/unit_tcryshcoin.png \
+  qt/res/icons/unit_tmcryshcoin.png \
+  qt/res/icons/unit_tucryshcoin.png \
+  qt/res/icons/yesvote.png \
+  qt/res/icons/novote.png \
+  qt/res/icons/abstainvote.png \
+  qt/cryshcoin/res/img/bg-dashboard-banner.png \
+  qt/cryshcoin/res/img/bg-multi-number-dark.png \
+  qt/cryshcoin/res/img/ic-check-locked.png \
+  qt/cryshcoin/res/img/ic-nav-address.png \
+  qt/cryshcoin/res/img/ic-update.png \
+  qt/cryshcoin/res/img/bg-multi-number.png \
+  qt/cryshcoin/res/img/ic-check-mint-off.png \
+  qt/cryshcoin/res/img/ic-nav-cold-staking.png \
+  qt/cryshcoin/res/img/ic-nav-cold-staking-active.png \
+  qt/cryshcoin/res/img/ic-nav-dashboard-active.png \
+  qt/cryshcoin/res/img/ic-wallet-status-locked.png \
+  qt/cryshcoin/res/img/bg-splash.png \
+  qt/cryshcoin/res/img/bg-splash.png \
+  qt/cryshcoin/res/img/ic-check-mint.png \
+  qt/cryshcoin/res/img/ic-nav-dashboard-hover.png \
+  qt/cryshcoin/res/img/ic-wallet-status-staking.png \
+  qt/cryshcoin/res/img/ic-check-peers-off.png \
+  qt/cryshcoin/res/img/ic-nav-dashboard.png \
+  qt/cryshcoin/res/img/ic-wallet-status-unlocked.png \
+  qt/cryshcoin/res/img/ic-check-peers.png \
+  qt/cryshcoin/res/img/ic-nav-master-active.png \
+  qt/cryshcoin/res/img/ic-watch-password-white.png \
+  qt/cryshcoin/res/img/bg-welcome-container.png \
+  qt/cryshcoin/res/img/ic-check-staking-off.png \
+  qt/cryshcoin/res/img/ic-nav-master-hover.png \
+  qt/cryshcoin/res/img/ic-watch-password.png \
+  qt/cryshcoin/res/img/bg-welcome.png \
+  qt/cryshcoin/res/img/ic-check-staking.png \
+  qt/cryshcoin/res/img/ic-nav-master.png \
+  qt/cryshcoin/res/img/btn-radio-active.png \
+  qt/cryshcoin/res/img/ic-check-sync-off.png \
+  qt/cryshcoin/res/img/ic-nav-privacy-active.png \
+  qt/cryshcoin/res/img/img-empty-contacts.png \
+  qt/cryshcoin/res/img/btn-radio-off.png \
+  qt/cryshcoin/res/img/ic-check-sync.png \
+  qt/cryshcoin/res/img/ic-nav-privacy-hover.png \
+  qt/cryshcoin/res/img/img-empty-dark-contacts.png \
+  qt/cryshcoin/res/img/ic-contact-arrow-down.png \
+  qt/cryshcoin/res/img/ic-contact-arrow-down-white.png \
+  qt/cryshcoin/res/img/ic-check-sync.png \
+  qt/cryshcoin/res/img/ic-check-faq.png \
+  qt/cryshcoin/res/img/ic-nav-privacy.png \
+  qt/cryshcoin/res/img/img-empty-dark-error.png \
+  qt/cryshcoin/res/img/ic-add-label.png \
+  qt/cryshcoin/res/img/ic-pending.png \
+  qt/cryshcoin/res/img/ic-check-theme-dark.png \
+  qt/cryshcoin/res/img/ic-nav-receive-active.png \
+  qt/cryshcoin/res/img/img-empty-dark-masternode.png \
+  qt/cryshcoin/res/img/ic-add-liliac.png \
+  qt/cryshcoin/res/img/ic-check-theme-light.png \
+  qt/cryshcoin/res/img/ic-nav-receive-hover.png \
+  qt/cryshcoin/res/img/img-empty-dark-multisend.png \
+  qt/cryshcoin/res/img/ic-add-purple.png \
+  qt/cryshcoin/res/img/ic-check-white.png \
+  qt/cryshcoin/res/img/ic-nav-receive.png \
+  qt/cryshcoin/res/img/img-empty-dark-peers.png \
+  qt/cryshcoin/res/img/ic-add.png \
+  qt/cryshcoin/res/img/ic-check.png \
+  qt/cryshcoin/res/img/ic-nav-send-active.png \
+  qt/cryshcoin/res/img/img-empty-dark-staking-off.png \
+  qt/cryshcoin/res/img/img-empty-dark-staking-on.png \
+  qt/cryshcoin/res/img/ic-address-book-grey.png \
+  qt/cryshcoin/res/img/ic-chevron-left.png \
+  qt/cryshcoin/res/img/ic-nav-send-hover.png \
+  qt/cryshcoin/res/img/img-empty-dark-transactions.png \
+  qt/cryshcoin/res/img/ic-address-book-white.png \
+  qt/cryshcoin/res/img/ic-chevron-right.png \
+  qt/cryshcoin/res/img/ic-nav-send.png \
+  qt/cryshcoin/res/img/img-empty-error.png \
+  qt/cryshcoin/res/img/ic-address-book.png \
+  qt/cryshcoin/res/img/ic-clear-liliac.png \
+  qt/cryshcoin/res/img/ic-nav-settings-active.png \
+  qt/cryshcoin/res/img/img-empty-masternode.png \
+  qt/cryshcoin/res/img/ic-address-send-white.png \
+  qt/cryshcoin/res/img/ic-clear-purple.png \
+  qt/cryshcoin/res/img/ic-nav-settings-hover.png \
+  qt/cryshcoin/res/img/img-empty-multisend.png \
+  qt/cryshcoin/res/img/ic-address-send.png \
+  qt/cryshcoin/res/img/ic-close-white.png \
+  qt/cryshcoin/res/img/ic-nav-settings.png \
+  qt/cryshcoin/res/img/img-empty-peers.png \
+  qt/cryshcoin/res/img/img-empty-privacy.png \
+  qt/cryshcoin/res/img/img-empty-privacy-dark.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-down-white.png \
+  qt/cryshcoin/res/img/ic-close.png \
+  qt/cryshcoin/res/img/ic-radio-liliac-on.png \
+  qt/cryshcoin/res/img/img-empty-staking-off.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-down.png \
+  qt/cryshcoin/res/img/ic-coin-crysh.png \
+  qt/cryshcoin/res/img/ic-receive-off.png \
+  qt/cryshcoin/res/img/img-empty-staking-on.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-up-white.png \
+  qt/cryshcoin/res/img/ic-coin-zcrysh.png \
+  qt/cryshcoin/res/img/ic-receive-on.png \
+  qt/cryshcoin/res/img/img-empty-transactions.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-up.png \
+  qt/cryshcoin/res/img/ic-coin-zcrysh.png \
+  qt/cryshcoin/res/img/ic-received.png \
+  qt/cryshcoin/res/img/img-logo-cryshcoin.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-white-down.png \
+  qt/cryshcoin/res/img/ic-combo-box.png \
+  qt/cryshcoin/res/img/ic-send.png \
+  qt/cryshcoin/res/img/img-logo-cryshcoin@2x.png \
+  qt/cryshcoin/res/img/ic-arrow-purple-down.png \
+  qt/cryshcoin/res/img/ic-connect.png \
+  qt/cryshcoin/res/img/ic-submenu-lock.png \
+  qt/cryshcoin/res/img/img-logo-cryshcoin@3x.png \
+  qt/cryshcoin/res/img/img-logo-cryshcoin.png \
+  qt/cryshcoin/res/img/ic-arrow-right-white.png \
+  qt/cryshcoin/res/img/ic-arrow-left-white.png \
+  qt/cryshcoin/res/img/ic-arrow-left.png \
+  qt/cryshcoin/res/img/ic-copy-liliac.png \
+  qt/cryshcoin/res/img/ic-submenu-staking.png \
+  qt/cryshcoin/res/img/img-nav-logo-cryshcoin.png \
+  qt/cryshcoin/res/img/ic-arrow-right.png \
+  qt/cryshcoin/res/img/ic-copy.png \
+  qt/cryshcoin/res/img/ic-copy-big.png \
+  qt/cryshcoin/res/img/ic-copy-big-white.png \
+  qt/cryshcoin/res/img/ic-submenu-unlock.png \
+  qt/cryshcoin/res/img/img-nav-logo.png \
+  qt/cryshcoin/res/img/ic-arrow-white-left.png \
+  qt/cryshcoin/res/img/ic-exit.png \
+  qt/cryshcoin/res/img/ic-switch-liliac-on.png \
+  qt/cryshcoin/res/img/img-nav-logo.png \
+  qt/cryshcoin/res/img/ic-arrow-white-right.png \
+  qt/cryshcoin/res/img/ic-expand.png \
+  qt/cryshcoin/res/img/ic-switch-off.png \
+  qt/cryshcoin/res/img/img-qr-test-big.png \
+  qt/cryshcoin/res/img/ic-check-active.png \
+  qt/cryshcoin/res/img/ic-folder.png \
+  qt/cryshcoin/res/img/ic-switch-on.png \
+  qt/cryshcoin/res/img/img-qr-test.png \
+  qt/cryshcoin/res/img/ic-check-box.png \
+  qt/cryshcoin/res/img/ic-check-box-dark-active.png \
+  qt/cryshcoin/res/img/ic-check-box-indeterminate.png \
+  qt/cryshcoin/res/img/ic-check-box-liliac-indeterminate.png \
+  qt/cryshcoin/res/img/ic-label-liliac.png \
+  qt/cryshcoin/res/img/ic-transaction-warning.png \
+  qt/cryshcoin/res/img/ic-transaction-mint.png \
+  qt/cryshcoin/res/img/ic-transaction-mint-inactive.png \
+  qt/cryshcoin/res/img/ic-check-cold-staking.png \
+  qt/cryshcoin/res/img/ic-check-cold-staking-off.png \
+  qt/cryshcoin/res/img/ic-check-cold-staking-enabled.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-cs-contract.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-cs-contract-inactive.png \
+  qt/cryshcoin/res/img/img-qr.png \
+  qt/cryshcoin/res/img/ic-check-connect-off.png \
+  qt/cryshcoin/res/img/ic-label.png \
+  qt/cryshcoin/res/img/ic-transaction-received.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-received.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-warning.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-mint.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-mint-inactive.png \
+  qt/cryshcoin/res/img/ic-transaction-received-inactive.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-received-inactive.png \
+  qt/cryshcoin/res/img/img-welcome-step1.png \
+  qt/cryshcoin/res/img/ic-check-connect.png \
+  qt/cryshcoin/res/img/ic-menu-hover.png \
+  qt/cryshcoin/res/img/ic-transaction-sent.png \
+  qt/cryshcoin/res/img/ic-transaction-sent-inactive.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-sent.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-sent-inactive.png \
+  qt/cryshcoin/res/img/img-welcome-step2.png \
+  qt/cryshcoin/res/img/ic-check-dark.png \
+  qt/cryshcoin/res/img/ic-mint.png \
+  qt/cryshcoin/res/img/ic-transaction-staked.png \
+  qt/cryshcoin/res/img/ic-transaction-staked-inactive.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-staked.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-staked-inactive.png \
+  qt/cryshcoin/res/img/img-welcome-step3.png \
+  qt/cryshcoin/res/img/ic-check-liliac-on.png \
+  qt/cryshcoin/res/img/ic-nav-address-active.png \
+  qt/cryshcoin/res/img/ic-unlock-staking.png \
+  qt/cryshcoin/res/img/img-welcome-step4.png \
+  qt/cryshcoin/res/img/ic-check-locked-off.png \
+  qt/cryshcoin/res/img/ic-nav-address-hover.png \
+  qt/cryshcoin/res/img/ic-update-liliac.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-down-purple.png \
+  qt/cryshcoin/res/img/ic-arrow-drop-up-purple.png \
+  qt/cryshcoin/res/img/ic-check-liliac-indeterminate.png \
+  qt/cryshcoin/res/img/ic-check-box-liliac-indeterminate.png \
+  qt/cryshcoin/res/img/ic-transaction-stake-delegated.png \
+  qt/cryshcoin/res/img/ic-transaction-stake-delegated-inactive.png \
+  qt/cryshcoin/res/img/ic-transaction-stake-hot.png \
+  qt/cryshcoin/res/img/ic-transaction-stake-hot-inactive.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-stake-hot.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-stake-hot-inactive.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-stake-delegated.png \
+  qt/cryshcoin/res/img/dark/ic-transaction-stake-delegated-inactive.png \
+  qt/cryshcoin/res/img/ic-transaction-cs-contract.png \
+  qt/cryshcoin/res/img/ic-transaction-cs-contract-inactive.png \
+  qt/cryshcoin/res/img/ic-check-box-indeterminate.png \
+  qt/cryshcoin/res/img/ani-loading-dark.gif \
+  qt/cryshcoin/res/img/ani-loading.gif
+
+
+
+BITCOIN_QT_BASE_CPP = \
+  qt/bantablemodel.cpp \
+  qt/bitcoinaddressvalidator.cpp \
+  qt/bitcoinamountfield.cpp \
+  qt/cryshcoin/cryshcoingui.cpp \
+  qt/bitcoinunits.cpp \
+  qt/blockexplorer.cpp \
+  qt/clientmodel.cpp \
+  qt/csvmodelwriter.cpp \
+  qt/guiutil.cpp \
+  qt/intro.cpp \
+  qt/networkstyle.cpp \
+  qt/notificator.cpp \
+  qt/optionsdialog.cpp \
+  qt/optionsmodel.cpp \
+  qt/peertablemodel.cpp \
+  qt/platformstyle.cpp \
+  qt/qvalidatedlineedit.cpp \
+  qt/qvaluecombobox.cpp \
+  qt/rpcconsole.cpp \
+  qt/splashscreen.cpp \
+  qt/trafficgraphwidget.cpp \
+  qt/utilitydialog.cpp
+
+BITCOIN_QT_WINDOWS_CPP = qt/winshutdownmonitor.cpp
+
+BITCOIN_QT_WALLET_CPP = \
+  qt/addressbookpage.cpp \
+  qt/addresstablemodel.cpp \
+  qt/askpassphrasedialog.cpp \
+  qt/blockexplorer.cpp \
+  qt/coincontroldialog.cpp \
+  qt/coincontroltreewidget.cpp \
+  qt/editaddressdialog.cpp \
+  qt/governancepage.cpp \
+  qt/openuridialog.cpp \
+  qt/paymentrequestplus.cpp \
+  qt/paymentserver.cpp \
+  qt/proposalframe.cpp \
+  qt/recentrequeststablemodel.cpp \
+  qt/transactiondesc.cpp \
+  qt/transactionfilterproxy.cpp \
+  qt/transactionrecord.cpp \
+  qt/transactiontablemodel.cpp \
+  qt/walletmodel.cpp \
+  qt/walletmodeltransaction.cpp \
+  qt/cryshcoin/loadingdialog.cpp \
+  qt/zcryshcontroldialog.cpp \
+  qt/cryshcoin/pwidget.cpp \
+  qt/cryshcoin/guitransactionsutils.cpp \
+  qt/cryshcoin/snackbar.cpp \
+  qt/cryshcoin/navmenuwidget.cpp \
+  qt/cryshcoin/lockunlock.cpp \
+  qt/cryshcoin/receivedialog.cpp \
+  qt/cryshcoin/furabstractlistitemdelegate.cpp \
+  qt/cryshcoin/txviewholder.cpp \
+  qt/cryshcoin/qtutils.cpp \
+  qt/cryshcoin/expandablebutton.cpp \
+  qt/cryshcoin/walletpassworddialog.cpp \
+  qt/cryshcoin/topbar.cpp \
+  qt/cryshcoin/txrow.cpp \
+  qt/cryshcoin/addressholder.cpp \
+  qt/cryshcoin/addressfilterproxymodel.cpp \
+  qt/cryshcoin/dashboardwidget.cpp \
+  qt/cryshcoin/coincontrolcryshwidget.cpp \
+  qt/cryshcoin/addresslabelrow.cpp \
+  qt/cryshcoin/contactdropdownrow.cpp \
+  qt/cryshcoin/contactsdropdown.cpp \
+  qt/cryshcoin/optionbutton.cpp \
+  qt/cryshcoin/mninfodialog.cpp \
+  qt/cryshcoin/coldstakingmodel.cpp \
+  qt/cryshcoin/mnmodel.cpp \
+  qt/cryshcoin/masternodewizarddialog.cpp \
+  qt/cryshcoin/mnrow.cpp \
+  qt/cryshcoin/masternodeswidget.cpp \
+  qt/cryshcoin/myaddressrow.cpp \
+  qt/cryshcoin/csrow.cpp \
+  qt/cryshcoin/sendchangeaddressdialog.cpp \
+  qt/cryshcoin/sendconfirmdialog.cpp \
+  qt/cryshcoin/sendcustomfeedialog.cpp \
+  qt/cryshcoin/sendchangeaddressdialog.cpp \
+  qt/cryshcoin/sendmultirow.cpp \
+  qt/cryshcoin/send.cpp \
+  qt/cryshcoin/addnewaddressdialog.cpp \
+  qt/cryshcoin/addnewcontactdialog.cpp \
+  qt/cryshcoin/requestdialog.cpp \
+  qt/cryshcoin/receivewidget.cpp \
+  qt/cryshcoin/tooltipmenu.cpp \
+  qt/cryshcoin/addresseswidget.cpp \
+  qt/cryshcoin/defaultdialog.cpp \
+  qt/cryshcoin/denomgenerationdialog.cpp \
+  qt/cryshcoin/privacywidget.cpp \
+  qt/cryshcoin/coldstakingwidget.cpp \
+  qt/cryshcoin/settings/settingsbackupwallet.cpp \
+  qt/cryshcoin/settings/settingsbittoolwidget.cpp \
+  qt/cryshcoin/settings/settingsconsolewidget.cpp \
+  qt/cryshcoin/settings/settingsdisplayoptionswidget.cpp \
+  qt/cryshcoin/settings/settingsfaqwidget.cpp \
+  qt/cryshcoin/settings/settingsinformationwidget.cpp \
+  qt/cryshcoin/settings/settingsmainoptionswidget.cpp \
+  qt/cryshcoin/settings/settingsmultisenddialog.cpp \
+  qt/cryshcoin/settings/settingsmultisendwidget.cpp \
+  qt/cryshcoin/settings/settingssignmessagewidgets.cpp \
+  qt/cryshcoin/settings/settingswalletoptionswidget.cpp \
+  qt/cryshcoin/settings/settingswalletrepairwidget.cpp \
+  qt/cryshcoin/settings/settingswidget.cpp \
+  qt/cryshcoin/welcomecontentwidget.cpp \
+  qt/cryshcoin/splash.cpp
+
+
+BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
+if TARGET_WINDOWS
+BITCOIN_QT_CPP += $(BITCOIN_QT_WINDOWS_CPP)
+endif
+if ENABLE_WALLET
+BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_CPP)
+endif
+
+RES_IMAGES = \
+  qt/res/images/about.png \
+  qt/res/images/splash.png \
+  qt/res/images/splash_testnet.png \
+  qt/res/images/splash_regtest.png \
+  qt/res/images/cryshcoin_logo_horizontal.png \
+  qt/res/images/downArrow_dark.png \
+  qt/res/images/downArrow_small_dark.png \
+  qt/res/images/downArrow_small.png \
+  qt/res/images/upArrow_small_dark.png \
+  qt/res/images/upArrow_small.png \
+  qt/res/images/leftArrow_small_dark.png \
+  qt/res/images/rightArrow_small_dark.png \
+  qt/res/images/qtreeview_selected.png
+
+RES_CSS = \
+  qt/res/css/default.css \
+  qt/cryshcoin/res/css/style_dark.css \
+  qt/cryshcoin/res/css/style_light.css
+
+RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
+
+BITCOIN_RC = qt/res/cryshcoin-qt-res.rc
+
+BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
+  -I$(builddir)/qt/forms
+
+qt_libbitcoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
+qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libbitcoinqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+
+qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES)
+
+nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+  $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
+
+# forms/foo.h -> forms/ui_foo.h
+QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
+
+# Most files will depend on the forms and moc files as includes. Generate them
+# before anything else.
+$(QT_MOC): $(QT_FORMS_H)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_cryshcoin_qt_OBJECTS) : | $(QT_MOC)
+
+#Generating these with a half-written protobuf header leads to wacky results.
+#This makes sure it's done.
+$(QT_MOC): $(PROTOBUF_H)
+$(QT_MOC_CPP): $(PROTOBUF_H)
+
+# cryshcoin-qt binary #
+qt_cryshcoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+  $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS) $(SVG_CFLAGS) $(CHARTS_CFLAGS)
+qt_cryshcoin_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+
+qt_cryshcoin_qt_SOURCES = qt/cryshcoin.cpp
+if TARGET_DARWIN
+  qt_cryshcoin_qt_SOURCES += $(BITCOIN_MM)
+endif
+if TARGET_WINDOWS
+  qt_cryshcoin_qt_SOURCES += $(BITCOIN_RC)
+endif
+qt_cryshcoin_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+if ENABLE_WALLET
+qt_cryshcoin_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+endif
+if ENABLE_ZMQ
+qt_cryshcoin_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+endif
+qt_cryshcoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBBITCOIN_ZEROCOIN) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(SVG_LIBS) $(CHARTS_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
+  $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+qt_cryshcoin_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_cryshcoin_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+
+#locale/foo.ts -> locale/foo.qm
+QT_QM=$(QT_TS:.ts=.qm)
+
+SECONDARY: $(QT_QM)
+
+$(srcdir)/qt/cryshcoinstrings.cpp: $(libbitcoin_server_a_SOURCES) $(libbitcoin_wallet_a_SOURCES) $(libbitcoin_common_a_SOURCES) $(libbitcoin_zmq_a_SOURCES) $(libbitcoin_util_a_SOURCES)
+	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
+	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
+
+translate: $(srcdir)/qt/cryshcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_BASE_CPP) qt/cryshcoin.cpp $(BITCOIN_QT_WINDOWS_CPP) $(BITCOIN_QT_WALLET_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/cryshcoin_en.ts
+
+$(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
+	@test -f $(RCC)
+	@cp -f $< $(@D)/temp_$(<F)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name cryshcoin_locale $(@D)/temp_$(<F) | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+	@rm $(@D)/temp_$(<F)
+
+$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
+	@test -f $(RCC)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name cryshcoin $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno qt/temp_cryshcoin_locale.qrc
+
+CLEANFILES += $(CLEAN_QT)
+
+cryshcoin_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_cryshcoin_qt_OBJECTS) qt/cryshcoin-qt$(EXEEXT) $(LIBBITCOINQT)
+
+cryshcoin_qt : qt/cryshcoin-qt$(EXEEXT)
+
+ui_%.h: %.ui
+	@test -f $(UIC)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(UIC) -o $@ $< || (echo "Error creating $@"; false)
+
+%.moc: %.cpp
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+moc_%.cpp: %.h
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(MOC) $(DEFAULT_INCLUDES) $(QT_INCLUDES) $(MOC_DEFS) $< | \
+	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
+
+%.qm: %.ts
+	@test -f $(LRELEASE)
+	@$(MKDIR_P) $(@D)
+	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
