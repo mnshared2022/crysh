@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2018-2019 The cryshcoin developers
+// Copyright (c) 2018-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,8 +33,8 @@ X509 *parse_b64der_cert(const char* cert_data)
 static SendCoinsRecipient handleRequest(PaymentServer* server, std::vector<unsigned char>& data)
 {
     RecipientCatcher sigCatcher;
-    QObject::connect(server, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
-        &sigCatcher, SLOT(getRecipient(SendCoinsRecipient)));
+    QObject::connect(server, &PaymentServer::receivedPaymentRequest,
+                     &sigCatcher, &RecipientCatcher::getRecipient);
 
     // Write data to a temp file:
     QTemporaryFile f;
@@ -50,8 +51,8 @@ static SendCoinsRecipient handleRequest(PaymentServer* server, std::vector<unsig
     // which will lead to a test failure anyway.
     QCoreApplication::sendEvent(&object, &event);
 
-    QObject::disconnect(server, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
-        &sigCatcher, SLOT(getRecipient(SendCoinsRecipient)));
+    QObject::disconnect(server, &PaymentServer::receivedPaymentRequest,
+                        &sigCatcher, &RecipientCatcher::getRecipient);
 
     // Return results from sigCatcher
     return sigCatcher.recipient;

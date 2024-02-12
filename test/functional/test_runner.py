@@ -10,7 +10,7 @@ forward all unrecognized arguments onto the individual test scripts.
 Functional tests are disabled on Windows by default. Use --force to run them anyway.
 
 For a description of arguments recognized by test scripts, see
-`test/functional/test_framework/test_framework.py:BitcoinTestFramework.main`.
+`test/functional/test_framework/test_framework.py:PivxTestFramework.main`.
 
 """
 
@@ -54,93 +54,91 @@ TEST_EXIT_SKIPPED = 77
 
 BASE_SCRIPTS= [
     # Scripts that are run by the travis build process.
+
     # Longest test should go first, to favor running tests in parallel
-    'wallet_basic.py',
-    'wallet_backup.py',
+    'wallet_basic.py',                          # ~ 498 sec
+    'wallet_backup.py',                         # ~ 477 sec
 
     # vv Tests less than 5m vv
-    'wallet_abandonconflict.py',
-    'wallet_reorg-stake.py',
-    'feature_coldStaking.py',
-    'rpc_rawtransaction.py',
-    'wallet_zapwallettxes.py',
-    'wallet_keypool_topup.py',
-    'p2p_pos_doublespend.py',
-    'wallet_txn_doublespend.py --mineblock',
-    'wallet_txn_clone.py --mineblock',
-    'interface_rest.py',
-    'feature_proxy.py',
-
-    'p2p_pos_fakestake.py',
-    'p2p_pos_fakestake_accepted.py',
-    'zerocoin_valid_public_spend.py',
-    #'p2p_zpos_fakestake.py',
-    #'p2p_zpos_fakestake_accepted.py',
-    #'zerocoin_wrapped_serials.py',
-    #'feature_block.py',
-    #'rpc_fundrawtransaction.py',
+    'wallet_zapwallettxes.py',                  # ~ 300 sec
+    'p2p_time_offset.py',                       # ~ 267 sec
+    'rpc_fundrawtransaction.py',                # ~ 260 sec
+    'mining_pos_reorg.py',                      # ~ 212 sec
+    'wallet_abandonconflict.py',                # ~ 212 sec
+    'wallet_hd.py',                             # ~ 210 sec
+    'wallet_zerocoin_publicspends.py',          # ~ 202 sec
+    'feature_logging.py',                       # ~ 200 sec
+    'rpc_rawtransaction.py',                    # ~ 193 sec
+    'wallet_keypool_topup.py',                  # ~ 174 sec
+    'wallet_txn_doublespend.py --mineblock',    # ~ 157 sec
+    'wallet_txn_clone.py --mineblock',          # ~ 157 sec
+    'rpc_spork.py',                             # ~ 156 sec
+    'interface_rest.py',                        # ~ 154 sec
+    'feature_proxy.py',                         # ~ 143 sec
+    'feature_uacomment.py',                     # ~ 130 sec
+    'wallet_upgrade.py',                        # ~ 124 sec
 
     # vv Tests less than 2m vv
-    'feature_uacomment.py',
-    'wallet_listreceivedby.py',
-    'wallet_accounts.py',
-    'wallet_dump.py',
-    'rpc_listtransactions.py',
+    'p2p_disconnect_ban.py',                    # ~ 118 sec
+    'wallet_listreceivedby.py',                 # ~ 117 sec
+    'mining_pos_fakestake.py',                  # ~ 113 sec
+    'feature_reindex.py',                       # ~ 110 sec
+    'interface_http.py',                        # ~ 105 sec
+    'wallet_listtransactions.py',               # ~ 97 sec
+    'mempool_reorg.py',                         # ~ 92 sec
+    'wallet_encryption.py',                     # ~ 89 sec
+    'wallet_keypool.py',                        # ~ 88 sec
+    'wallet_dump.py',                           # ~ 83 sec
+    'rpc_net.py',                               # ~ 83 sec
+    'rpc_bip38.py',                             # ~ 82 sec
+    'rpc_deprecated.py',                        # ~ 80 sec
+    'interface_bitcoin_cli.py',                 # ~ 80 sec
+    'mempool_packages.py',                      # ~ 63 sec
 
     # vv Tests less than 60s vv
-    #'wallet_importmulti.py',
-    #'mempool_limit.py', # We currently don't limit our mempool_reorg
-    'feature_reindex.py',
-    'rpc_bip38.py',
+    'wallet_labels.py',                         # ~ 57 sec
+    'rpc_signmessage.py',                       # ~ 54 sec
+    'mempool_resurrect.py',                     # ~ 51 sec
+    'rpc_budget.py',                            # ~ 50 sec
+    'mempool_spend_coinbase.py',                # ~ 50 sec
+    'rpc_signrawtransaction.py',                # ~ 50 sec
+    'rpc_decodescript.py',                      # ~ 50 sec
+    'rpc_blockchain.py',                        # ~ 50 sec
+    'wallet_disable.py',                        # ~ 50 sec
+    'mining_v5_upgrade.py',                     # ~ 48 sec
+    'feature_help.py',                          # ~ 30 sec
 
-    # vv Tests less than 30s vv
-    'rpc_spork.py',
-    'rpc_budget.py',
-    #'interface_zmq.py',
-    'interface_bitcoin_cli.py',
-    'mempool_resurrect.py',
-    #'rpc_getchaintips.py',
-    'mempool_spend_coinbase.py',
-    'mempool_reorg.py',
-    #'mempool_persist.py', # Not yet implemented
-    'interface_http.py',
-    #'rpc_users.py',
-    'rpc_signrawtransaction.py',
-    'p2p_disconnect_ban.py',
-    'rpc_decodescript.py',
-    'rpc_blockchain.py',
-    #'rpc_deprecated.py',
-    'wallet_disable.py',
-    'rpc_net.py',
-    'p2p_time_offset.py',
-    'wallet_keypool.py',
-    #'p2p_mempool.py',
-    #'mining_prioritisetransaction.py',
-    #'p2p_invalid_block.py',
-    #'p2p_invalid_tx.py',
-    'rpc_signmessage.py',
-    #'wallet_import_rescan.py',
-    #'mining_basic.py',
-    #'wallet_bumpfee.py',
-    #'wallet_listsinceblock.py',
-    #'p2p_leak.py',
-    'wallet_encryption.py',
-    #'feature_cltv.py',
-    #'wallet_resendwallettransactions.py',
-    #'feature_minchainwork.py',
-    #'p2p_fingerprint.py',
-    #'p2p_unrequested_blocks.py',
-    #'feature_config_args.py',
-    'feature_help.py',
     # Don't append tests at the end to avoid merge conflicts
     # Put them in a random line within the section that fits their approximate run-time
+    # 'feature_block.py',
+    # 'wallet_importmulti.py',
+    # 'mempool_limit.py', # We currently don't limit our mempool_reorg
+    # 'interface_zmq.py',
+    # 'rpc_getchaintips.py',
+    # 'mempool_persist.py',
+    # 'rpc_users.py',
+    # 'p2p_mempool.py',
+    # 'mining_prioritisetransaction.py',
+    # 'p2p_invalid_block.py',
+    # 'p2p_invalid_tx.py',
+    # 'wallet_import_rescan.py',
+    # 'mining_basic.py',
+    # 'wallet_bumpfee.py',
+    # 'wallet_listsinceblock.py',
+    # 'p2p_leak.py',
+    # 'feature_cltv.py',
+    # 'feature_minchainwork.py',
+    # 'p2p_fingerprint.py',
+    # 'p2p_unrequested_blocks.py',
+    # 'feature_config_args.py',
+
 ]
 
 EXTENDED_SCRIPTS = [
     # These tests are not run by the travis build process.
     # Longest test should go first, to favor running tests in parallel
     # vv Tests less than 20m vv
-    #'feature_fee_estimation.py',
+    'feature_fee_estimation.py',                # ~ 360 sec
     # vv Tests less than 5m vv
     # vv Tests less than 2m vv
     #'p2p_timeouts.py',
@@ -151,6 +149,33 @@ EXTENDED_SCRIPTS = [
     #'example_test.py',
     'feature_notifications.py',
     'rpc_invalidateblock.py',
+]
+
+LEGACY_SKIP_TESTS = [
+    # These tests are not run when the flag --legacywallet is used
+    'feature_help.py',
+    'feature_logging.py',
+    'feature_reindex.py',
+    'feature_proxy.py',
+    'feature_uacomment.py',
+    'interface_bitcoin_cli.py',
+    'interface_http.py',
+    'interface_rest.py',
+    'mempool_reorg.py',
+    'mempool_resurrect.py',
+    'mempool_spend_coinbase.py',
+    'p2p_disconnect_ban.py',
+    'p2p_time_offset.py',
+    'rpc_bip38.py',
+    'rpc_blockchain.py',
+    'rpc_budget.py',
+    'rpc_decodescript.py',
+    'rpc_fundrawtransaction.py',
+    'rpc_net.py',
+    'rpc_signmessage.py',
+    'rpc_spork.py',
+    'wallet_hd.py',         # no HD tests for pre-HD wallets
+    'wallet_upgrade.py',    # can't upgrade to pre-HD wallet
 ]
 
 # Place EXTENDED_SCRIPTS first since it has the 3 longest running tests
@@ -180,6 +205,7 @@ def main():
     parser.add_argument('--jobs', '-j', type=int, default=4, help='how many test scripts to run in parallel. Default=4.')
     parser.add_argument('--keepcache', '-k', action='store_true', help='the default behavior is to flush the cache directory on startup. --keepcache retains the cache from the previous testrun.')
     parser.add_argument('--quiet', '-q', action='store_true', help='only print dots, results summary and failure logs')
+    parser.add_argument('--legacywallet', '-w', action='store_true', help='create pre-HD wallets only')
     parser.add_argument('--tmpdirprefix', '-t', default=tempfile.gettempdir(), help="Root directory for datadirs")
     args, unknown_args = parser.parse_known_args()
 
@@ -193,13 +219,15 @@ def main():
     config.read_file(open(configfile))
 
     passon_args.append("--configfile=%s" % configfile)
+    if args.legacywallet:
+        passon_args.append("--legacywallet")
 
     # Set up logging
     logging_level = logging.INFO if args.quiet else logging.DEBUG
     logging.basicConfig(format='%(message)s', level=logging_level)
 
     # Create base test directory
-    tmpdir = "%s/cryshcoin_test_runner_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+    tmpdir = "%s/CRYSH_test_runner_%s" % (args.tmpdirprefix, datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
     os.makedirs(tmpdir)
 
     logging.debug("Temporary test directory at %s" % tmpdir)
@@ -215,7 +243,7 @@ def main():
         sys.exit(0)
 
     if not (enable_wallet and enable_utils and enable_bitcoind):
-        print("No functional tests to run. Wallet, utils, and cryshcoind must all be enabled")
+        print("No functional tests to run. Wallet, utils, and CRYSHd must all be enabled")
         print("Rerun `configure` with -enable-wallet, -with-utils and -with-daemon and rerun make")
         sys.exit(0)
 
@@ -248,6 +276,10 @@ def main():
             else:
                 print("{}WARNING!{} Test '{}' not found in current test list.".format(BOLD[1], BOLD[0], exclude_test))
 
+    # If --legacywallet, remove extra test cases
+    if args.legacywallet:
+        test_list = [x for x in test_list if x not in LEGACY_SKIP_TESTS]
+
     if not test_list:
         print("No valid test scripts specified. Check that your test is in one "
               "of the test lists in test_runner.py, or run test_runner.py with no arguments to run all tests")
@@ -265,13 +297,20 @@ def main():
     if not args.keepcache:
         shutil.rmtree("%s/test/cache" % config["environment"]["BUILDDIR"], ignore_errors=True)
 
-    run_tests(test_list, config["environment"]["SRCDIR"], config["environment"]["BUILDDIR"], config["environment"]["EXEEXT"], tmpdir, args.jobs, args.coverage, passon_args, args.combinedlogslen)
+    run_tests(test_list,
+              config["environment"]["SRCDIR"],
+              config["environment"]["BUILDDIR"],
+              config["environment"]["EXEEXT"],
+              tmpdir,
+              args.jobs, args.coverage,
+              passon_args, args.combinedlogslen,
+              args.keepcache)
 
-def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_coverage=False, args=[], combined_logs_len=0):
-    # Warn if bitcoind is already running (unix only)
+def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_coverage=False, args=[], combined_logs_len=0, keep_cache=False):
+    # Warn if CRYSHd is already running (unix only)
     try:
-        if subprocess.check_output(["pidof", "cryshcoind"]) is not None:
-            print("%sWARNING!%s There is already a cryshcoind process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.check_output(["pidof", "CRYSHd"]) is not None:
+            print("%sWARNING!%s There is already a CRYSHd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except (OSError, subprocess.SubprocessError):
         pass
 
@@ -282,8 +321,8 @@ def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_cove
 
     #Set env vars
     if "BITCOIND" not in os.environ:
-        os.environ["BITCOIND"] = build_dir + '/src/cryshcoind' + exeext
-        os.environ["BITCOINCLI"] = build_dir + '/src/cryshcoin-cli' + exeext
+        os.environ["BITCOIND"] = build_dir + '/src/CRYSHd' + exeext
+        os.environ["BITCOINCLI"] = build_dir + '/src/CRYSH-cli' + exeext
 
     tests_dir = src_dir + '/test/functional/'
 
@@ -299,11 +338,27 @@ def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_cove
 
     if len(test_list) > 1 and jobs > 1:
         # Populate cache
+        # Send a ping message every 5 minutes to not get stalled on Travis.
+        import threading
+        pingTime = 5 * 60
+        stopTimer = False
+
+        def pingTravis():
+            if stopTimer:
+                return
+            print("- Creating cache in progress...")
+            sys.stdout.flush()
+            threading.Timer(pingTime, pingTravis).start()
+
+        if not keep_cache:
+            pingTravis()
         try:
             subprocess.check_output([tests_dir + 'create_cache.py'] + flags + ["--tmpdir=%s/cache" % tmpdir])
         except subprocess.CalledProcessError as e:
             sys.stdout.buffer.write(e.output)
             raise
+        finally:
+            stopTimer = True
 
     #Run Tests
     job_queue = TestHandler(jobs, tests_dir, tmpdir, test_list, flags)
@@ -384,7 +439,7 @@ class TestHandler:
         self.test_list = test_list
         self.flags = flags
         self.num_running = 0
-        # In case there is a graveyard of zombie cryshcoinds, we can apply a
+        # In case there is a graveyard of zombie CRYSHds, we can apply a
         # pseudorandom offset to hopefully jump over them.
         # (625 is PORT_RANGE/MAX_NODES)
         self.portseed_offset = int(time.time() * 1000) % 625
@@ -511,7 +566,7 @@ class RPCCoverage():
     Coverage calculation works by having each test script subprocess write
     coverage files into a particular directory. These files contain the RPC
     commands invoked during testing, as well as a complete listing of RPC
-    commands per `cryshcoin-cli help` (`rpc_interface.txt`).
+    commands per `CRYSH-cli help` (`rpc_interface.txt`).
 
     After all tests complete, the commands run are combined and diff'd against
     the complete list to calculate uncovered RPC commands.

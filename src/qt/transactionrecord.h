@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2016 The Dash developers
-// Copyright (c) 2016-2019 The cryshcoin developers
+// Copyright (c) 2016-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,6 +9,7 @@
 #define BITCOIN_QT_TRANSACTIONRECORD_H
 
 #include "amount.h"
+#include "script/script.h"
 #include "uint256.h"
 
 #include <QList>
@@ -22,7 +24,7 @@ class TransactionStatus
 {
 public:
     TransactionStatus() : countsForBalance(false), sortKey(""),
-                          matures_in(0), status(Offline), depth(0), open_for(0), cur_num_blocks(-1)
+                          matures_in(0), status(Unconfirmed), depth(0), open_for(0), cur_num_blocks(-1)
     {
     }
 
@@ -31,13 +33,11 @@ public:
         /// Normal (sent/received) transactions
         OpenUntilDate,  /**< Transaction not yet final, waiting for date */
         OpenUntilBlock, /**< Transaction not yet final, waiting for block */
-        Offline,        /**< Not sent to any other nodes **/
         Unconfirmed,    /**< Not yet mined into a block **/
         Confirming,     /**< Confirmed, but waiting for the recommended number of confirmations **/
         Conflicted,     /**< Conflicts with other transaction or mempool **/
         /// Generated (mined) transactions
         Immature,       /**< Mined but waiting for maturity */
-        MaturesWarning, /**< Transaction will likely not mature because no nodes have confirmed */
         NotAccepted     /**< Mined but not accepted */
     };
 
@@ -62,9 +62,6 @@ public:
 
     /** Current number of blocks (to know whether cached status is still valid) */
     int cur_num_blocks;
-
-    //** Know when to update transaction for ix locks **/
-    int cur_num_ix_locks;
 };
 
 /** UI model for a transaction. A core transaction can be represented by multiple UI transactions if it has
@@ -77,30 +74,12 @@ public:
         Other,
         Generated,
         StakeMint,
-        StakeZcrysh,
         SendToAddress,
         SendToOther,
         RecvWithAddress,
         MNReward,
         RecvFromOther,
         SendToSelf,
-        ZerocoinMint,
-        ZerocoinSpend,
-        RecvFromZerocoinSpend,
-        ZerocoinSpend_Change_zcrysh,
-        ZerocoinSpend_FromMe,
-        RecvWithObfuscation,
-        ObfuscationDenominate,
-        ObfuscationCollateralPayment,
-        ObfuscationMakeCollaterals,
-        ObfuscationCreateDenominations,
-        Obfuscated,
-        StakeDelegated, // Received cold stake (owner)
-        StakeHot, // Staked via a delegated P2CS.
-        P2CSDelegation, // Non-spendable P2CS, staker side.
-        P2CSDelegationSent, // Spendable P2CS delegated utxo. (coin-owner)
-        P2CSUnlockOwner, // Coin-owner spent the delegated utxo
-        P2CSUnlockStaker // Staker watching the owner spent the delegated utxo
     };
 
     /** Number of confirmation recommended for accepting a transaction */
@@ -125,11 +104,24 @@ public:
     static QList<TransactionRecord> decomposeTransaction(const CWallet* wallet, const CWalletTx& wtx);
 
     /// Helpers
-    static bool ExtractAddress(const CScript& scriptPubKey, bool fColdStake, std::string& addressStr);
-    static void loadHotOrColdStakeOrContract(const CWallet* wallet, const CWalletTx& wtx,
-                                            TransactionRecord& record, bool isContract = false);
-    static void loadUnlockColdStake(const CWallet* wallet, const CWalletTx& wtx, TransactionRecord& record);
+    static bool decomposeCoinStake(const CWallet* wallet, const CWalletTx& wtx,
+                                   const CAmount& nCredit, const CAmount& nDebit, bool fZSpendFromMe,
+                                   QList<TransactionRecord>& parts);
 
+    static bool decomposeCreditTransaction(const CWallet* wallet, const CWalletTx& wtx,
+                                    QList<TransactionRecord>& parts);
+
+    static bool decomposeSendToSelfTransaction(const CWalletTx& wtx, const CAmount& nCredit,
+                                    const CAmount& nDebit, bool involvesWatchAddress,
+                                    QList<TransactionRecord>& parts);
+
+    static bool decomposeDebitTransaction(const CWallet* wallet, const CWalletTx& wtx,
+                                                      const CAmount& nDebit, bool involvesWatchAddress,
+                                                      QList<TransactionRecord>& parts);
+
+    static std::string getValueOrReturnEmpty(const std::map<std::string, std::string>& mapValue, const std::string& key);
+    static bool ExtractAddress(const CScript& scriptPubKey, std::string& addressStr);
+    
     /** @name Immutable transaction attributes
       @{*/
     uint256 hash;
@@ -171,10 +163,6 @@ public:
     /** Return true if the tx is a coinstake
      */
     bool isCoinStake() const;
-
-    /** Return true if the tx is a any cold staking type tx.
-     */
-    bool isAnyColdStakingType() const;
 
     /** Return true if the tx hash is null and/or if the size is 0
      */

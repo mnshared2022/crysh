@@ -1,4 +1,5 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +15,7 @@ class PaymentServerTests : public QObject
 {
     Q_OBJECT
 
-private slots:
+private Q_SLOTS:
     void paymentServerTests();
 };
 
@@ -25,7 +26,7 @@ class RecipientCatcher : public QObject
 {
     Q_OBJECT
 
-public slots:
+public Q_SLOTS:
     void getRecipient(SendCoinsRecipient r);
 
 public:

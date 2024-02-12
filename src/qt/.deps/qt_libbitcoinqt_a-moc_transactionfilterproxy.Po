@@ -1,224 +1,236 @@
 qt/qt_libbitcoinqt_a-moc_transactionfilterproxy.o: \
-  qt/moc_transactionfilterproxy.cpp qt/transactionfilterproxy.h amount.h \
-  serialize.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/algorithm \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/initializer_list \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstddef \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/type_traits \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstring \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/utility \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__tuple \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/memory \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/typeinfo \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/exception \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstdint \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/new \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__undef___deallocate \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/limits \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__undef_min_max \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/iterator \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__functional_base \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/iosfwd \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/wchar.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rune_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wchar_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdarg.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdio.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_va_list.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/stdio.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_off_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/time.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_clock_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_time_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timespec.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_wctype.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wint_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_wctype_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/ctype.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/runetype.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__debug \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/tuple \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/atomic \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/assert.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdlib.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/wait.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_pid_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_id_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_mcontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_mcontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/mach/i386/_structs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigaltstack.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ucontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uid_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/resource.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/_OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/_OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/alloca.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_dev_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mode_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ios \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__locale \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/string \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstdio \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cwchar \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cwctype \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cctype \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/wctype.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_wctrans_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/stdexcept \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/mutex \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__mutex_base \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/chrono \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ctime \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ratio \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/climits \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/syslimits.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/system_error \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cerrno \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/errno.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/errno.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/pthread_impl.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/sched.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/qos.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/qos.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mach_port_t.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/functional \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/locale.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_locale.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_xlocale.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_ctype.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/__wctype.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_stdio.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_stdlib.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_string.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_time.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_wchar.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_wctype.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/map \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__tree \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/set \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/vector \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__bit_reference \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__split_buffer \
-  libzerocoin/Denominations.h libzerocoin/SpendType.h sporkid.h \
-  /root/crysh/depends/x86_64-apple-darwin14/include/QtCore/QDateTime \
-  /root/crysh/depends/x86_64-apple-darwin14/include/QtCore/qdatetime.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstring.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qchar.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qglobal.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qconfig.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qtcore-config.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qsystemdetection.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/TargetConditionals.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityMacros.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qprocessordetection.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qcompilerdetection.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qtypeinfo.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qsysinfo.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qlogging.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qflags.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qatomic.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbasicatomic.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qatomic_cxx11.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qgenericatomic.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qglobalstatic.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmutex.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qnumeric.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qversiontagging.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbytearray.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qrefcount.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qnamespace.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qarraydata.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qshareddata.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qhash.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qiterator.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qlist.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qalgorithms.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qhashfunctions.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qpair.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/numeric \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/list \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbytearraylist.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstringlist.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qregexp.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstringmatcher.h \
-  /root/crysh/depends/x86_64-apple-darwin14/include/QtCore/QSortFilterProxyModel \
-  /root/crysh/depends/x86_64-apple-darwin14/include/QtCore/qsortfilterproxymodel.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qabstractproxymodel.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qabstractitemmodel.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvariant.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmetatype.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvarlengtharray.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qcontainerfwd.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobjectdefs.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobjectdefs_impl.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmap.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobject.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qscopedpointer.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobject_impl.h \
-  /root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvector.h
+ qt/moc_transactionfilterproxy.cpp /usr/include/stdc-predef.h \
+ qt/transactionfilterproxy.h amount.h serialize.h \
+ /usr/include/c++/7/algorithm /usr/include/c++/7/utility \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+ /usr/include/c++/7/bits/stl_relops.h /usr/include/c++/7/bits/stl_pair.h \
+ /usr/include/c++/7/bits/move.h /usr/include/c++/7/bits/concept_check.h \
+ /usr/include/c++/7/type_traits /usr/include/c++/7/initializer_list \
+ /usr/include/c++/7/bits/stl_algobase.h \
+ /usr/include/c++/7/bits/functexcept.h \
+ /usr/include/c++/7/bits/exception_defines.h \
+ /usr/include/c++/7/bits/cpp_type_traits.h \
+ /usr/include/c++/7/ext/type_traits.h \
+ /usr/include/c++/7/ext/numeric_traits.h \
+ /usr/include/c++/7/bits/stl_iterator_base_types.h \
+ /usr/include/c++/7/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/7/debug/assertions.h \
+ /usr/include/c++/7/bits/stl_iterator.h \
+ /usr/include/c++/7/bits/ptr_traits.h /usr/include/c++/7/debug/debug.h \
+ /usr/include/c++/7/bits/predefined_ops.h \
+ /usr/include/c++/7/bits/stl_algo.h /usr/include/c++/7/cstdlib \
+ /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/c++/7/bits/std_abs.h /usr/include/c++/7/bits/algorithmfwd.h \
+ /usr/include/c++/7/bits/stl_heap.h /usr/include/c++/7/bits/stl_tempbuf.h \
+ /usr/include/c++/7/bits/stl_construct.h /usr/include/c++/7/new \
+ /usr/include/c++/7/exception /usr/include/c++/7/bits/exception.h \
+ /usr/include/c++/7/bits/exception_ptr.h \
+ /usr/include/c++/7/bits/cxxabi_init_exception.h \
+ /usr/include/c++/7/typeinfo /usr/include/c++/7/bits/hash_bytes.h \
+ /usr/include/c++/7/bits/nested_exception.h \
+ /usr/include/c++/7/ext/alloc_traits.h \
+ /usr/include/c++/7/bits/alloc_traits.h \
+ /usr/include/c++/7/bits/memoryfwd.h \
+ /usr/include/c++/7/bits/uniform_int_dist.h /usr/include/c++/7/limits \
+ /usr/include/c++/7/array /usr/include/c++/7/stdexcept \
+ /usr/include/c++/7/string /usr/include/c++/7/bits/stringfwd.h \
+ /usr/include/c++/7/bits/char_traits.h /usr/include/c++/7/bits/postypes.h \
+ /usr/include/c++/7/cwchar /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h /usr/include/c++/7/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/7/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h \
+ /usr/include/c++/7/ext/new_allocator.h \
+ /usr/include/c++/7/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h \
+ /usr/include/c++/7/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/7/iosfwd \
+ /usr/include/c++/7/cctype /usr/include/ctype.h \
+ /usr/include/c++/7/bits/ostream_insert.h \
+ /usr/include/c++/7/bits/cxxabi_forced.h \
+ /usr/include/c++/7/bits/stl_function.h \
+ /usr/include/c++/7/backward/binders.h \
+ /usr/include/c++/7/bits/range_access.h \
+ /usr/include/c++/7/bits/basic_string.h \
+ /usr/include/c++/7/ext/atomicity.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h \
+ /usr/include/c++/7/ext/string_conversions.h /usr/include/c++/7/cstdio \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/7/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/7/bits/functional_hash.h \
+ /usr/include/c++/7/bits/basic_string.tcc /usr/include/assert.h \
+ /usr/include/c++/7/ios /usr/include/c++/7/bits/ios_base.h \
+ /usr/include/c++/7/bits/locale_classes.h \
+ /usr/include/c++/7/bits/locale_classes.tcc \
+ /usr/include/c++/7/system_error \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
+ /usr/include/c++/7/streambuf /usr/include/c++/7/bits/streambuf.tcc \
+ /usr/include/c++/7/bits/basic_ios.h \
+ /usr/include/c++/7/bits/locale_facets.h /usr/include/c++/7/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h \
+ /usr/include/c++/7/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h \
+ /usr/include/c++/7/bits/locale_facets.tcc \
+ /usr/include/c++/7/bits/basic_ios.tcc /usr/include/c++/7/map \
+ /usr/include/c++/7/bits/stl_tree.h \
+ /usr/include/c++/7/ext/aligned_buffer.h \
+ /usr/include/c++/7/bits/stl_map.h /usr/include/c++/7/tuple \
+ /usr/include/c++/7/bits/uses_allocator.h \
+ /usr/include/c++/7/bits/invoke.h /usr/include/c++/7/bits/stl_multimap.h \
+ /usr/include/c++/7/set /usr/include/c++/7/bits/stl_set.h \
+ /usr/include/c++/7/bits/stl_multiset.h /usr/include/string.h \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/include/c++/7/vector /usr/include/c++/7/bits/stl_uninitialized.h \
+ /usr/include/c++/7/bits/stl_vector.h \
+ /usr/include/c++/7/bits/stl_bvector.h /usr/include/c++/7/bits/vector.tcc \
+ compat/endian.h config/pivx-config.h compat/byteswap.h \
+ /usr/include/byteswap.h prevector.h /usr/include/c++/7/stdlib.h \
+ /usr/include/c++/7/iterator /usr/include/c++/7/ostream \
+ /usr/include/c++/7/bits/ostream.tcc /usr/include/c++/7/istream \
+ /usr/include/c++/7/bits/istream.tcc \
+ /usr/include/c++/7/bits/stream_iterator.h sporkid.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/QDateTime \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/qdatetime.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstring.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qchar.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qglobal.h \
+ /usr/include/c++/7/cstddef \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qconfig.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qtcore-config.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qsystemdetection.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qprocessordetection.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qcompilerdetection.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qtypeinfo.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qsysinfo.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qlogging.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qflags.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qatomic.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbasicatomic.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qatomic_cxx11.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qgenericatomic.h \
+ /usr/include/c++/7/atomic /usr/include/c++/7/bits/atomic_base.h \
+ /usr/include/c++/7/bits/atomic_lockfree_defines.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qglobalstatic.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qnumeric.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qversiontagging.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbytearray.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qrefcount.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qnamespace.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qarraydata.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qshareddata.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qhash.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qiterator.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qlist.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qalgorithms.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qhashfunctions.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qpair.h \
+ /usr/include/c++/7/numeric /usr/include/c++/7/bits/stl_numeric.h \
+ /usr/include/c++/7/list /usr/include/c++/7/bits/stl_list.h \
+ /usr/include/c++/7/bits/allocated_ptr.h /usr/include/c++/7/bits/list.tcc \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbytearraylist.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstringlist.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qregexp.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstringmatcher.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/QSortFilterProxyModel \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/qsortfilterproxymodel.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qabstractproxymodel.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qabstractitemmodel.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvariant.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qmetatype.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvarlengtharray.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qcontainerfwd.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobjectdefs.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobjectdefs_impl.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qmap.h \
+ /usr/include/c++/7/functional /usr/include/c++/7/bits/std_function.h \
+ /usr/include/c++/7/bits/refwrap.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobject.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qscopedpointer.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobject_impl.h \
+ /usr/include/c++/7/chrono /usr/include/c++/7/ratio \
+ /usr/include/c++/7/ctime /usr/include/c++/7/bits/parse_numbers.h \
+ /root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvector.h
+
+/usr/include/stdc-predef.h:
 
 qt/transactionfilterproxy.h:
 
@@ -226,442 +238,574 @@ amount.h:
 
 serialize.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/algorithm:
+/usr/include/c++/7/algorithm:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config:
+/usr/include/c++/7/utility:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/initializer_list:
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstddef:
+/usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h:
+/usr/include/features.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/type_traits:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstring:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h:
+/usr/include/c++/7/bits/stl_relops.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h:
+/usr/include/c++/7/bits/stl_pair.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h:
+/usr/include/c++/7/bits/move.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h:
+/usr/include/c++/7/bits/concept_check.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h:
+/usr/include/c++/7/type_traits:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h:
+/usr/include/c++/7/initializer_list:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h:
+/usr/include/c++/7/bits/stl_algobase.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h:
+/usr/include/c++/7/bits/functexcept.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h:
+/usr/include/c++/7/bits/exception_defines.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h:
+/usr/include/c++/7/bits/cpp_type_traits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h:
+/usr/include/c++/7/ext/type_traits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h:
+/usr/include/c++/7/ext/numeric_traits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/utility:
+/usr/include/c++/7/bits/stl_iterator_base_types.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__tuple:
+/usr/include/c++/7/bits/stl_iterator_base_funcs.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/memory:
+/usr/include/c++/7/debug/assertions.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/typeinfo:
+/usr/include/c++/7/bits/stl_iterator.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/exception:
+/usr/include/c++/7/bits/ptr_traits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstdint:
+/usr/include/c++/7/debug/debug.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h:
+/usr/include/c++/7/bits/predefined_ops.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h:
+/usr/include/c++/7/bits/stl_algo.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h:
+/usr/include/c++/7/cstdlib:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h:
+/usr/include/stdlib.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/new:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__undef___deallocate:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/limits:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__undef_min_max:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/iterator:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__functional_base:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/iosfwd:
+/usr/include/endian.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/wchar.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mbstate_t.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ct_rune_t.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rune_t.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wchar_t.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdarg.h:
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdio.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_va_list.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/stdio.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_off_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/time.h:
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_clock_t.h:
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_time_t.h:
+/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timespec.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_wctype.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wint_t.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_wctype_t.h:
+/usr/include/alloca.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/ctype.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/runetype.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__debug:
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/tuple:
+/usr/include/c++/7/bits/std_abs.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/atomic:
+/usr/include/c++/7/bits/algorithmfwd.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/assert.h:
+/usr/include/c++/7/bits/stl_heap.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdlib.h:
+/usr/include/c++/7/bits/stl_tempbuf.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/wait.h:
+/usr/include/c++/7/bits/stl_construct.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_pid_t.h:
+/usr/include/c++/7/new:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_id_t.h:
+/usr/include/c++/7/exception:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/signal.h:
+/usr/include/c++/7/bits/exception.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h:
+/usr/include/c++/7/bits/exception_ptr.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/signal.h:
+/usr/include/c++/7/bits/cxxabi_init_exception.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/signal.h:
+/usr/include/c++/7/typeinfo:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_mcontext.h:
+/usr/include/c++/7/bits/hash_bytes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_mcontext.h:
+/usr/include/c++/7/bits/nested_exception.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/mach/i386/_structs.h:
+/usr/include/c++/7/ext/alloc_traits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
+/usr/include/c++/7/bits/alloc_traits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigaltstack.h:
+/usr/include/c++/7/bits/memoryfwd.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ucontext.h:
+/usr/include/c++/7/bits/uniform_int_dist.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h:
+/usr/include/c++/7/limits:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uid_t.h:
+/usr/include/c++/7/array:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/resource.h:
+/usr/include/c++/7/stdexcept:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h:
+/usr/include/c++/7/string:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/endian.h:
+/usr/include/c++/7/bits/stringfwd.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/endian.h:
+/usr/include/c++/7/bits/char_traits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_endian.h:
+/usr/include/c++/7/bits/postypes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/_OSByteOrder.h:
+/usr/include/c++/7/cwchar:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/_OSByteOrder.h:
+/usr/include/wchar.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/alloca.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/types.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/types.h:
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_dev_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mode_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ios:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__locale:
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/string:
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstdio:
+/usr/include/c++/7/cstdint:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cwchar:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cwctype:
+/usr/include/stdint.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cctype:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/wctype.h:
+/usr/include/c++/7/bits/allocator.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_wctrans_t.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/stdexcept:
+/usr/include/c++/7/ext/new_allocator.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/mutex:
+/usr/include/c++/7/bits/localefwd.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__mutex_base:
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/chrono:
+/usr/include/c++/7/clocale:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ctime:
+/usr/include/locale.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/ratio:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/climits:
+/usr/include/c++/7/iosfwd:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/limits.h:
+/usr/include/c++/7/cctype:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/limits.h:
+/usr/include/ctype.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/limits.h:
+/usr/include/c++/7/bits/ostream_insert.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/limits.h:
+/usr/include/c++/7/bits/cxxabi_forced.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_limits.h:
+/usr/include/c++/7/bits/stl_function.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/syslimits.h:
+/usr/include/c++/7/backward/binders.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/system_error:
+/usr/include/c++/7/bits/range_access.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cerrno:
+/usr/include/c++/7/bits/basic_string.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/errno.h:
+/usr/include/c++/7/ext/atomicity.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/errno.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/pthread_impl.h:
+/usr/include/pthread.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/sched.h:
+/usr/include/sched.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
+/usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
+/usr/include/time.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_t.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/pthread/qos.h:
+/usr/include/c++/7/ext/string_conversions.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/qos.h:
+/usr/include/c++/7/cstdio:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mach_port_t.h:
+/usr/include/stdio.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/functional:
+/usr/include/x86_64-linux-gnu/bits/libio.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/locale.h:
+/usr/include/x86_64-linux-gnu/bits/_G_config.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_locale.h:
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale.h:
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_xlocale.h:
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_ctype.h:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/__wctype.h:
+/usr/include/c++/7/cerrno:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_stdio.h:
+/usr/include/errno.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_stdlib.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_string.h:
+/usr/include/linux/errno.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_time.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_wchar.h:
+/usr/include/asm-generic/errno.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/xlocale/_wctype.h:
+/usr/include/asm-generic/errno-base.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/map:
+/usr/include/c++/7/bits/functional_hash.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__tree:
+/usr/include/c++/7/bits/basic_string.tcc:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/set:
+/usr/include/assert.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/vector:
+/usr/include/c++/7/ios:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__bit_reference:
+/usr/include/c++/7/bits/ios_base.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__split_buffer:
+/usr/include/c++/7/bits/locale_classes.h:
 
-libzerocoin/Denominations.h:
+/usr/include/c++/7/bits/locale_classes.tcc:
 
-libzerocoin/SpendType.h:
+/usr/include/c++/7/system_error:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h:
+
+/usr/include/c++/7/streambuf:
+
+/usr/include/c++/7/bits/streambuf.tcc:
+
+/usr/include/c++/7/bits/basic_ios.h:
+
+/usr/include/c++/7/bits/locale_facets.h:
+
+/usr/include/c++/7/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h:
+
+/usr/include/c++/7/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h:
+
+/usr/include/c++/7/bits/locale_facets.tcc:
+
+/usr/include/c++/7/bits/basic_ios.tcc:
+
+/usr/include/c++/7/map:
+
+/usr/include/c++/7/bits/stl_tree.h:
+
+/usr/include/c++/7/ext/aligned_buffer.h:
+
+/usr/include/c++/7/bits/stl_map.h:
+
+/usr/include/c++/7/tuple:
+
+/usr/include/c++/7/bits/uses_allocator.h:
+
+/usr/include/c++/7/bits/invoke.h:
+
+/usr/include/c++/7/bits/stl_multimap.h:
+
+/usr/include/c++/7/set:
+
+/usr/include/c++/7/bits/stl_set.h:
+
+/usr/include/c++/7/bits/stl_multiset.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
+/usr/include/c++/7/vector:
+
+/usr/include/c++/7/bits/stl_uninitialized.h:
+
+/usr/include/c++/7/bits/stl_vector.h:
+
+/usr/include/c++/7/bits/stl_bvector.h:
+
+/usr/include/c++/7/bits/vector.tcc:
+
+compat/endian.h:
+
+config/pivx-config.h:
+
+compat/byteswap.h:
+
+/usr/include/byteswap.h:
+
+prevector.h:
+
+/usr/include/c++/7/stdlib.h:
+
+/usr/include/c++/7/iterator:
+
+/usr/include/c++/7/ostream:
+
+/usr/include/c++/7/bits/ostream.tcc:
+
+/usr/include/c++/7/istream:
+
+/usr/include/c++/7/bits/istream.tcc:
+
+/usr/include/c++/7/bits/stream_iterator.h:
 
 sporkid.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/include/QtCore/QDateTime:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/QDateTime:
 
-/root/crysh/depends/x86_64-apple-darwin14/include/QtCore/qdatetime.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/qdatetime.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstring.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstring.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qchar.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qchar.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qglobal.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qglobal.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qconfig.h:
+/usr/include/c++/7/cstddef:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qtcore-config.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qconfig.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qsystemdetection.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qtcore-config.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/TargetConditionals.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qsystemdetection.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityMacros.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qprocessordetection.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qprocessordetection.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qcompilerdetection.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qcompilerdetection.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qtypeinfo.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qtypeinfo.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qsysinfo.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qsysinfo.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qlogging.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qlogging.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qflags.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qflags.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qatomic.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qatomic.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbasicatomic.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbasicatomic.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qatomic_cxx11.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qatomic_cxx11.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qgenericatomic.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qgenericatomic.h:
+/usr/include/c++/7/atomic:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qglobalstatic.h:
+/usr/include/c++/7/bits/atomic_base.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmutex.h:
+/usr/include/c++/7/bits/atomic_lockfree_defines.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qnumeric.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qglobalstatic.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qversiontagging.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qnumeric.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbytearray.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qversiontagging.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qrefcount.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbytearray.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qnamespace.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qrefcount.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qarraydata.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qnamespace.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qshareddata.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qarraydata.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qhash.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qshareddata.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qiterator.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qhash.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qlist.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qiterator.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qalgorithms.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qlist.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qhashfunctions.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qalgorithms.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qpair.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qhashfunctions.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/numeric:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qpair.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/list:
+/usr/include/c++/7/numeric:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qbytearraylist.h:
+/usr/include/c++/7/bits/stl_numeric.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstringlist.h:
+/usr/include/c++/7/list:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qregexp.h:
+/usr/include/c++/7/bits/stl_list.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qstringmatcher.h:
+/usr/include/c++/7/bits/allocated_ptr.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/include/QtCore/QSortFilterProxyModel:
+/usr/include/c++/7/bits/list.tcc:
 
-/root/crysh/depends/x86_64-apple-darwin14/include/QtCore/qsortfilterproxymodel.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qabstractproxymodel.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qabstractitemmodel.h:
+/usr/include/limits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvariant.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmetatype.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvarlengtharray.h:
+/usr/include/linux/limits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qcontainerfwd.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobjectdefs.h:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobjectdefs_impl.h:
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qmap.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qbytearraylist.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobject.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstringlist.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qscopedpointer.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qregexp.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qobject_impl.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qstringmatcher.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/share/../include/QtCore/qvector.h:
+/root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/QSortFilterProxyModel:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/include/QtCore/qsortfilterproxymodel.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qabstractproxymodel.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qabstractitemmodel.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvariant.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qmetatype.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvarlengtharray.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qcontainerfwd.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobjectdefs.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobjectdefs_impl.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qmap.h:
+
+/usr/include/c++/7/functional:
+
+/usr/include/c++/7/bits/std_function.h:
+
+/usr/include/c++/7/bits/refwrap.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobject.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qscopedpointer.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qobject_impl.h:
+
+/usr/include/c++/7/chrono:
+
+/usr/include/c++/7/ratio:
+
+/usr/include/c++/7/ctime:
+
+/usr/include/c++/7/bits/parse_numbers.h:
+
+/root/CRYSH/depends/x86_64-pc-linux-gnu/share/../include/QtCore/qvector.h:

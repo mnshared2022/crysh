@@ -1,5 +1,5 @@
 ---
-name: "cryshcoin-dmg-signer"
+name: "pivx-dmg-signer"
 distro: "ubuntu"
 suites:
 - "bionic"
@@ -8,10 +8,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/mnshared2022/crysh-detached-sigs.git"
+- "url": "https://github.com/pivx-project/pivx-detached-sigs.git"
   "dir": "signature"
 files:
-- "cryshcoin-osx-unsigned.tar.gz"
+- "pivx-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -26,12 +26,12 @@ script: |
     echo "REAL=\`which -a ${prog} | grep -v ${WRAP_DIR}/${prog} | head -1\`" >> ${WRAP_DIR}/${prog}
     echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/faketime/libfaketime.so.1' >> ${WRAP_DIR}/${prog}
     echo "export FAKETIME=\"${REFERENCE_DATETIME}\"" >> ${WRAP_DIR}/${prog}
-    echo "\$REAL \$@" >> $WRAP_DIR/${prog}
+    echo "\$REAL \"\$@\"" >> $WRAP_DIR/${prog}
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=cryshcoin-osx-unsigned.tar.gz
-  SIGNED=cryshcoin-osx-signed.dmg
+  UNSIGNED=pivx-osx-unsigned.tar.gz
+  SIGNED=pivx-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

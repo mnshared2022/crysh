@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2013 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #include "script/script.h"
 #include "script/standard.h"
 #include "uint256.h"
-#include "test_cryshcoin.h"
+#include "test_pivx.h"
 
 #include <vector>
 
@@ -19,7 +20,7 @@
 static std::vector<unsigned char>
 Serialize(const CScript& s)
 {
-    std::vector<unsigned char> sSerialized(s);
+    std::vector<unsigned char> sSerialized(s.begin(), s.end());
     return sSerialized;
 }
 
@@ -32,7 +33,7 @@ BOOST_AUTO_TEST_CASE(GetSigOpCount)
     BOOST_CHECK_EQUAL(s1.GetSigOpCount(false), 0U);
     BOOST_CHECK_EQUAL(s1.GetSigOpCount(true), 0U);
 
-    uint160 dummy(0);
+    uint160 dummy;
     s1 << OP_1 << ToByteVector(dummy) << ToByteVector(dummy) << OP_2 << OP_CHECKMULTISIG;
     BOOST_CHECK_EQUAL(s1.GetSigOpCount(true), 2U);
     s1 << OP_IF << OP_CHECKSIG << OP_ENDIF;

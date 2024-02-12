@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The crysh Coin developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers, 2015-@COPYRIGHT_YEAR@ The PIVX Core developers, 2020-@COPYRIGHT_YEAR@ The CRYSH Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>cryshcoin-Qt</string>
+  <string>CRYSH-Qt</string>
 
   <key>CFBundleName</key>
-  <string>cryshcoin-Qt</string>
+  <string>CRYSH-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>io.cryshcoin.cryshcoin-Qt</string>
+  <string>io.CRYSH.CRYSH-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.cryshcoin.cryshcoinPayment</string>
+      <string>io.pivx.PivxPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>cryshcoin</string>
+        <string>pivx</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>io.cryshcoin.paymentrequest</string>
+      <string>io.pivx.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>cryshcoin payment request</string>
+      <string>Pivx payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-cryshcoin-payment-request</string>
+        <string>application/x-pivx-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>cryshcoinpaymentrequest</string>
+          <string>pivxpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>io.cryshcoin.paymentrequest</string>
+        <string>io.pivx.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

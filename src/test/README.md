@@ -5,44 +5,44 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the cryshcoind tests manually, launch `src/test/test_cryshcoin`. To recompile
+To run the CRYSHd tests manually, launch `src/test/test_CRYSH`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the cryshcoind tests.
+to run the CRYSHd tests.
 
-To add more cryshcoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more CRYSHd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_FIXTURE_TEST_SUITE sections.
 
-To run the cryshcoin-qt tests manually, launch `src/qt/test/test_cryshcoin-qt`
+To run the CRYSH-qt tests manually, launch `src/qt/test/test_CRYSH-qt`
 
-To add more cryshcoin-qt tests, add them to the `src/qt/test/` directory and
+To add more CRYSH-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_cryshcoin has some built-in command-line arguments; for
+test_CRYSH has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_cryshcoin --log_level=all --run_test=getarg_tests
+    test_CRYSH --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_cryshcoin --run_test=getarg_tests/doubledash
+    test_CRYSH --run_test=getarg_tests/doubledash
 
-Run `test_cryshcoin --help` for the full list.
+Run `test_CRYSH --help` for the full list.
 
 ### Note on adding test cases
 
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since cryshcoin already uses boost, it makes
+unit testing framework, and since CRYSH already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called `test_cryshcoin`
+The build system is setup to compile an executable called `test_CRYSH`
 that runs all of the unit tests.  The main source file is called
-test_cryshcoin.cpp, which simply includes other files that contain the
+test_pivx.cpp, which simply includes other files that contain the
 actual unit tests (outside of a couple required preprocessor
 directives). To add a new unit test file to our test suite you need
 to add the file to `src/Makefile.test.include`. The pattern is to

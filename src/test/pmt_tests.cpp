@@ -1,5 +1,6 @@
 // Copyright (c) 2012-2013 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,7 +10,7 @@
 #include "uint256.h"
 #include "version.h"
 #include "consensus/merkle.h"
-#include "test/test_cryshcoin.h"
+#include "test/test_pivx.h"
 
 #include <vector>
 
@@ -47,7 +48,7 @@ BOOST_AUTO_TEST_CASE(pmt_test1)
 
         // calculate actual merkle root and height
         uint256 merkleRoot1 = BlockMerkleRoot(block);
-        std::vector<uint256> vTxid(nTx, 0);
+        std::vector<uint256> vTxid(nTx, UINT256_ZERO);
         for (unsigned int j=0; j<nTx; j++)
             vTxid[j] = block.vtx[j].GetHash();
         int nHeight = 1, nTx_ = nTx;
@@ -89,7 +90,7 @@ BOOST_AUTO_TEST_CASE(pmt_test1)
 
             // check that it has the same merkle root as the original, and a valid one
             BOOST_CHECK(merkleRoot1 == merkleRoot2);
-            BOOST_CHECK(merkleRoot2 != 0);
+            BOOST_CHECK(!merkleRoot2.IsNull());
 
             // check that it contains the matched transactions (in the same order!)
             BOOST_CHECK(vMatchTxid1 == vMatchTxid2);

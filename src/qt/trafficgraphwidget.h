@@ -1,10 +1,11 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_TRAFFICGRAPHWIDGET_H
-#define BITCOIN_QT_TRAFFICGRAPHWIDGET_H
+#ifndef BITCOIN_QT_TRAFFICGRCRYSHWIDGET_H
+#define BITCOIN_QT_TRAFFICGRCRYSHWIDGET_H
 
 #include <QQueue>
 #include <QWidget>
@@ -28,7 +29,7 @@ public:
 protected:
     void paintEvent(QPaintEvent*);
 
-public slots:
+public Q_SLOTS:
     void updateRates();
     void setGraphRangeMins(int mins);
     void clear();
@@ -46,4 +47,4 @@ private:
     ClientModel* clientModel;
 };
 
-#endif // BITCOIN_QT_TRAFFICGRAPHWIDGET_H
+#endif // BITCOIN_QT_TRAFFICGRCRYSHWIDGET_H

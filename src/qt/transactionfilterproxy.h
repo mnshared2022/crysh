@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -59,14 +60,8 @@ public:
     /** Set whether to hide orphan stakes. */
     void setHideOrphans(bool fHide);
 
-    /** Only zc txes **/
-    void setShowZcTxes(bool fOnlyZc);
-
     /** Only stakes txes **/
-    void setOnlyStakes(bool fOnlyStakes);
-
-    /** Shows only p2cs-p2cs && xxx-p2cs **/
-    void setOnlyColdStakes(bool fOnlyColdStakes);
+    void setOnlyStakesandMN(bool fOnlyStakesandMN);
 
     int rowCount(const QModelIndex& parent = QModelIndex()) const;
     static bool isOrphan(const int status, const int type);
@@ -86,13 +81,10 @@ private:
     int limitRows;
     bool showInactive;
     bool fHideOrphans = true;
-    bool fOnlyZc = false;
-    bool fOnlyStakes = false;
-    bool fOnlyColdStaking = false;
+    bool fOnlyStakesandMN = false;
 
-    bool isZcTx(int type) const;
     bool isStakeTx(int type) const;
-    bool isColdStake(int type) const;
+	bool isMasternodeRewardTx(int type) const;
 };
 
 #endif // BITCOIN_QT_TRANSACTIONFILTERPROXY_H

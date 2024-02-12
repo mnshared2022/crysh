@@ -1,5 +1,6 @@
 // Copyright 2014 BitPay, Inc.
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +9,7 @@
 #include <string>
 #include <map>
 #include <univalue.h>
-#include "test/test_cryshcoin.h"
+#include "test/test_pivx.h"
 
 #include <boost/test/unit_test.hpp>
 

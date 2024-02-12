@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2019 The cryshcoin developers
+// Copyright (c) 2015-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,18 +22,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(crysh);
-    unitlist.append(mcrysh);
-    unitlist.append(ucrysh);
+    unitlist.append(PIV);
+    unitlist.append(mPIV);
+    unitlist.append(uPIV);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case crysh:
-    case mcrysh:
-    case ucrysh:
+    case PIV:
+    case mPIV:
+    case uPIV:
         return true;
     default:
         return false;
@@ -42,40 +43,39 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case crysh:
-        return QString("cryshcoin");
-    case mcrysh:
-        return QString("mcryshcoin");
-    case ucrysh:
-        return QString::fromUtf8("ucryshcoin");
+    case PIV:
+        return QString("CRYSH");
+    case mPIV:
+        return QString("mCRYSH");
+    case uPIV:
+        return QString::fromUtf8("uCRYSH");
     default:
         return QString("???");
     }
 }
 
-QString BitcoinUnits::name(int unit, bool isZcrysh)
+QString BitcoinUnits::name(int unit)
 {
-    QString z = "";
-    if(isZcrysh) z = "z";
+    const QString CURR_UNIT = QString(CURRENCY_UNIT.c_str());
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case crysh:
-            return z + QString("crysh");
-        case mcrysh:
-            return z + QString("mcrysh");
-        case ucrysh:
-            return z + QString::fromUtf8("μcrysh");
+        case PIV:
+            return CURR_UNIT;
+        case mPIV:
+            return QString("m") + CURR_UNIT;
+        case uPIV:
+            return QString::fromUtf8("μ") + CURR_UNIT;
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case crysh:
-            return z + QString("tcrysh");
-        case mcrysh:
-            return z + QString("mtcrysh");
-        case ucrysh:
-            return z + QString::fromUtf8("μtcrysh");
+        case PIV:
+            return QString("t") + CURR_UNIT;
+        case mPIV:
+            return QString("mt") + CURR_UNIT;
+        case uPIV:
+            return QString::fromUtf8("μt") + CURR_UNIT;
         default:
             return QString("???");
         }
@@ -84,25 +84,26 @@ QString BitcoinUnits::name(int unit, bool isZcrysh)
 
 QString BitcoinUnits::description(int unit)
 {
+    const QString CURR_UNIT = QString(CURRENCY_UNIT.c_str());
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case crysh:
-            return QString("crysh");
-        case mcrysh:
-            return QString("Milli-crysh (1 / 1" THIN_SP_UTF8 "000)");
-        case ucrysh:
-            return QString("Micro-crysh (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case PIV:
+            return CURR_UNIT;
+        case mPIV:
+            return QString("Milli-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
+        case uPIV:
+            return QString("Micro-") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case crysh:
-            return QString("Testcryshs");
-        case mcrysh:
-            return QString("Milli-Testcrysh (1 / 1" THIN_SP_UTF8 "000)");
-        case ucrysh:
-            return QString("Micro-Testcrysh (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case PIV:
+            return QString("Test") + CURR_UNIT;
+        case mPIV:
+            return QString("Milli-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000)");
+        case uPIV:
+            return QString("Micro-Test") + CURR_UNIT + QString(" (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -112,11 +113,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case crysh:
+    case PIV:
         return 100000000;
-    case mcrysh:
+    case mPIV:
         return 100000;
-    case ucrysh:
+    case uPIV:
         return 100;
     default:
         return 100000000;
@@ -126,11 +127,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case crysh:
+    case PIV:
         return 8;
-    case mcrysh:
+    case mPIV:
         return 5;
-    case ucrysh:
+    case uPIV:
         return 2;
     default:
         return 0;
@@ -212,7 +213,7 @@ QString BitcoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool p
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
 
-QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZcrysh)
+QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros)
 {
     QSettings settings;
     int digits = settings.value("digits").toInt();
@@ -229,12 +230,12 @@ QString BitcoinUnits::floorWithUnit(int unit, const CAmount& amount, bool plussi
         }
     }
 
-    return result + QString(" ") + name(unit, isZcrysh);
+    return result + QString(" ") + name(unit);
 }
 
-QString BitcoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros, bool isZcrysh)
+QString BitcoinUnits::floorHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators, bool cleanRemainderZeros)
 {
-    QString str(floorWithUnit(unit, amount, plussign, separators, cleanRemainderZeros, isZcrysh));
+    QString str(floorWithUnit(unit, amount, plussign, separators, cleanRemainderZeros));
     str.replace(QChar(THIN_SP_CP), QString(COMMA_HTML));
     return QString("<span style='white-space: nowrap;'>%1</span>").arg(str);
 }
@@ -308,5 +309,5 @@ QVariant BitcoinUnits::data(const QModelIndex& index, int role) const
 
 CAmount BitcoinUnits::maxMoney()
 {
-    return Params().MaxMoneyOut();
+    return Params().GetConsensus().nMaxMoneyOut;
 }

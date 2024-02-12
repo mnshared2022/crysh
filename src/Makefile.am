@@ -19,7 +19,8 @@ else
 LIBUNIVALUE = $(UNIVALUE_LIBS)
 endif
 
-BITCOIN_INCLUDES=-I$(builddir) $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
+BITCOIN_CONFIG_INCLUDES=-I$(builddir)/config
+BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) $(CRYPTO_CFLAGS) $(SSL_CFLAGS)
 
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
@@ -29,7 +30,6 @@ LIBBITCOIN_COMMON=libbitcoin_common.a
 LIBBITCOIN_CLI=libbitcoin_cli.a
 LIBBITCOIN_UTIL=libbitcoin_util.a
 LIBBITCOIN_CRYPTO=crypto/libbitcoin_crypto.a
-LIBBITCOIN_ZEROCOIN=libzerocoin/libbitcoin_zerocoin.a
 LIBBITCOINQT=qt/libbitcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
@@ -52,7 +52,6 @@ EXTRA_LIBRARIES += \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_ZEROCOIN) \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_CLI) \
   $(LIBBITCOIN_WALLET) \
@@ -66,20 +65,23 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += cryshcoind
+  bin_PROGRAMS += CRYSHd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += cryshcoin-cli cryshcoin-tx
+  bin_PROGRAMS += CRYSH-cli CRYSH-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# crysh Coin #
+# CRYSH core #
 BITCOIN_CORE_H = \
   activemasternode.h \
+  activemasternodeman.h \
+  activemasternodeconfig.h \
+  addrdb.h \
   addrman.h \
-  alert.h \
   allocators.h \
+  arith_uint256.h \
   amount.h \
   base58.h \
   bip38.h \
@@ -99,45 +101,54 @@ BITCOIN_CORE_H = \
   compat/endian.h \
   compat/sanity.h \
   compressor.h \
+  consensus/consensus.h \
   consensus/merkle.h \
+  consensus/validation.h \
+  consensus/tx_verify.h \
+  consensus/params.h \
+  consensus/upgrades.h \
   primitives/block.h \
   primitives/transaction.h \
   core_io.h \
+  cuckoocache.h \
   crypter.h \
   pairresult.h \
   addressbook.h \
-  denomination_functions.h \
-  obfuscation.h \
-  obfuscation-relay.h \
   wallet/db.h \
+  fs.h \
   hash.h \
   httprpc.h \
   httpserver.h \
   init.h \
-  invalid.h \
-  invalid_outpoints.json.h \
-  invalid_serials.json.h \
+  interface/wallet.h \
+  legacy/stakemodifier.h \
   kernel.h \
-  swifttx.h \
   key.h \
+  key_io.h \
   keystore.h \
-  leveldbwrapper.h \
+  dbwrapper.h \
   limitedmap.h \
+  logging.h \
   main.h \
+  memusage.h \
   masternode.h \
   masternode-payments.h \
-  masternode-budget.h \
   masternode-sync.h \
   masternodeman.h \
   masternodeconfig.h \
   merkleblock.h \
   messagesigner.h \
   miner.h \
-  mruset.h \
-  netbase.h \
   net.h \
+  netaddress.h \
+  netbase.h \
+  netmessagemaker.h \
   noui.h \
+  policy/fees.h \
+  policy/policy.h \
+  optional.h \
   pow.h \
+  prevector.h \
   protocol.h \
   pubkey.h \
   random.h \
@@ -148,6 +159,7 @@ BITCOIN_CORE_H = \
   rpc/server.h \
   scheduler.h \
   script/interpreter.h \
+  script/keyorigin.h \
   script/script.h \
   script/sigcache.h \
   script/sign.h \
@@ -158,42 +170,37 @@ BITCOIN_CORE_H = \
   sporkdb.h \
   sporkid.h \
   stakeinput.h \
+  script/ismine.h \
   streams.h \
   support/cleanse.h \
   sync.h \
   threadsafety.h \
+  threadinterrupt.h \
   timedata.h \
   tinyformat.h \
   torcontrol.h \
   txdb.h \
   txmempool.h \
   guiinterface.h \
+  guiinterfaceutil.h \
   uint256.h \
+  uint512.h \
+  blob_uint256.h \
   undo.h \
+  util/memory.h \
   util.h \
+  util/macros.h \
+  util/threadnames.h \
   utilstrencodings.h \
   utilmoneystr.h \
   utiltime.h \
   validationinterface.h \
   version.h \
+  wallet/hdchain.h \
+  wallet/rpcwallet.h \
+  wallet/scriptpubkeyman.h \
   wallet/wallet.h \
-  wallet/wallet_ismine.h \
   wallet/walletdb.h \
-  zcryshchain.h \
-  zcrysh/accumulators.h \
-  zcrysh/accumulatorcheckpoints.h \
-  zcrysh/accumulatorcheckpoints.json.h \
-  zcrysh/accumulatormap.h \
-  zcrysh/deterministicmint.h \
-  zcrysh/mintpool.h \
-  zcrysh/witness.h \
-  zcrysh/zerocoin.h \
-  zcrysh/zcryshtracker.h \
-  zcrysh/zcryshwallet.h \
-  zcrysh/zcryshmodule.h \
-  genwit.h \
-  concurrentqueue.h \
-  lightzcryshthread.h \
   zmq/zmqabstractnotifier.h \
   zmq/zmqconfig.h \
   zmq/zmqnotificationinterface.h \
@@ -205,43 +212,46 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between cryshcoind and cryshcoin-qt
+# server: shared between CRYSHd and CRYSH-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
+  addrdb.cpp \
   addrman.cpp \
-  alert.cpp \
   bloom.cpp \
   blocksignature.cpp \
   chain.cpp \
   checkpoints.cpp \
+  consensus/params.cpp \
+  consensus/tx_verify.cpp \
   httprpc.cpp \
   httpserver.cpp \
   init.cpp \
-  leveldbwrapper.cpp \
+  dbwrapper.cpp \
   main.cpp \
   merkleblock.cpp \
   miner.cpp \
   net.cpp \
   noui.cpp \
+  policy/fees.cpp \
+  policy/policy.cpp \
   pow.cpp \
   rest.cpp \
   rpc/blockchain.cpp \
   rpc/masternode.cpp \
-  rpc/budget.cpp \
   rpc/mining.cpp \
   rpc/misc.cpp \
   rpc/net.cpp \
   rpc/rawtransaction.cpp \
   rpc/server.cpp \
   script/sigcache.cpp \
+  script/ismine.cpp \
   sporkdb.cpp \
   timedata.cpp \
   torcontrol.cpp \
   txdb.cpp \
   txmempool.cpp \
   validationinterface.cpp \
-  zcryshchain.cpp \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
@@ -253,55 +263,50 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between cryshcoind and cryshcoin-qt, but only linked
+# wallet: shared between CRYSHd and CRYSH-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_wallet_a_SOURCES = \
   activemasternode.cpp \
+  activemasternodeconfig.cpp \
+  activemasternodeman.cpp \
   bip38.cpp \
-  denomination_functions.cpp \
-  obfuscation.cpp \
-  obfuscation-relay.cpp \
-  wallet/db.cpp \
+  interface/wallet.cpp \
   addressbook.cpp \
   crypter.cpp \
-  swifttx.cpp \
+  key_io.cpp \
   masternode.cpp \
-  masternode-budget.cpp \
   masternode-payments.cpp \
   masternode-sync.cpp \
   masternodeconfig.cpp \
   masternodeman.cpp \
   messagesigner.cpp \
+  legacy/stakemodifier.cpp \
+  kernel.cpp \
+  wallet/db.cpp \
   wallet/rpcdump.cpp \
   wallet/rpcwallet.cpp \
-  kernel.cpp \
+  wallet/hdchain.cpp \
+  wallet/scriptpubkeyman.cpp \
   wallet/wallet.cpp \
-  wallet/wallet_ismine.cpp \
   wallet/walletdb.cpp \
-  zcrysh/deterministicmint.cpp \
-  zcrysh/zerocoin.cpp \
-  zcrysh/accumulators.cpp \
-  zcrysh/mintpool.cpp \
-  zcrysh/witness.cpp \
-  zcrysh/zcryshwallet.cpp \
-  zcrysh/zcryshtracker.cpp \
   stakeinput.cpp \
-  genwit.cpp \
-  zcrysh/zcryshmodule.cpp \
-  lightzcryshthread.cpp \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
 crypto_libbitcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(PIC_FLAGS)
 crypto_libbitcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIC_FLAGS)
 crypto_libbitcoin_crypto_a_SOURCES = \
+  crypto/aes.cpp \
+  crypto/aes.h \
   crypto/sha1.cpp \
   crypto/sha256.cpp \
   crypto/sha512.cpp \
   crypto/chacha20.h \
   crypto/chacha20.cpp \
+  crypto/google_authenticator.cpp \
+  crypto/hmac_sha1.cpp \
   crypto/hmac_sha256.cpp \
   crypto/rfc6979_hmac_sha256.cpp \
   crypto/hmac_sha512.cpp \
@@ -317,6 +322,8 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/common.h \
   crypto/sha256.h \
   crypto/sha512.h \
+  crypto/google_authenticator.h \
+  crypto/hmac_sha1.h \
   crypto/hmac_sha256.h \
   crypto/rfc6979_hmac_sha256.h \
   crypto/hmac_sha512.h \
@@ -329,68 +336,46 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sph_jh.h \
   crypto/sph_keccak.h \
   crypto/sph_skein.h \
-  crypto/sph_types.h
+  crypto/sph_types.h \
+  crypto/sph_luffa.h \
+  crypto/sph_haval.h \
+  crypto/luffa.c \
+  crypto/sph_cubehash.h \
+  crypto/cubehash.c \
+  crypto/sph_shavite \
+  crypto/shavite.c \
+  crypto/sph_simd.h \
+  crypto/simd.c \
+  crypto/sph_echo \
+  crypto/echo.c \
+  crypto/shabal.c \
+  crypto/whirlpool.c \
+  crypto/haval.c \
+  crypto/hamsi.c \
+  crypto/fugue.c \
+  crypto/sph_sha2big.c
 
-# libzerocoin library
-libzerocoin_libbitcoin_zerocoin_a_CPPFLAGS = $(AM_CPPFLAGS) $(BOOST_CPPFLAGS)
-libzerocoin_libbitcoin_zerocoin_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
-  libzerocoin/Accumulator.h \
-  libzerocoin/AccumulatorProofOfKnowledge.h \
-  libzerocoin/bignum.h \
-  libzerocoin/Coin.h \
-  libzerocoin/CoinRandomnessSchnorrSignature.h \
-  libzerocoin/CoinSpend.h \
-  libzerocoin/Commitment.h \
-  libzerocoin/Denominations.h \
-  libzerocoin/ParamGeneration.h \
-  libzerocoin/Params.h \
-  libzerocoin/SerialNumberSignatureOfKnowledge.h \
-  libzerocoin/SpendType.h \
-  libzerocoin/ZerocoinDefines.h \
-  libzerocoin/bignum.cpp \
-  libzerocoin/Accumulator.cpp \
-  libzerocoin/AccumulatorProofOfKnowledge.cpp \
-  libzerocoin/Coin.cpp \
-  libzerocoin/CoinRandomnessSchnorrSignature.cpp \
-  libzerocoin/CoinSpend.cpp \
-  libzerocoin/Commitment.cpp \
-  libzerocoin/Denominations.cpp \
-  libzerocoin/ParamGeneration.cpp \
-  libzerocoin/Params.cpp \
-  libzerocoin/SerialNumberSignatureOfKnowledge.cpp
-if USE_NUM_GMP
-  libzerocoin_libbitcoin_zerocoin_a_SOURCES += libzerocoin/bignum_gmp.cpp
-endif
-if USE_NUM_OPENSSL
-  libzerocoin_libbitcoin_zerocoin_a_SOURCES += libzerocoin/bignum_openssl.cpp
-endif
-
-# common: shared between cryshcoind, and cryshcoin-qt and non-server tools
+# common: shared between CRYSHd, and CRYSH-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
-  zcrysh/accumulators.cpp \
-  zcrysh/accumulatorcheckpoints.cpp \
-  zcrysh/accumulatormap.cpp \
   allocators.cpp \
   amount.cpp \
   base58.cpp \
   bip38.cpp \
   chainparams.cpp \
+  consensus/upgrades.cpp \
   coins.cpp \
   compressor.cpp \
   consensus/merkle.cpp \
   primitives/block.cpp \
-  zcrysh/deterministicmint.cpp \
   primitives/transaction.cpp \
-  zcrysh/zerocoin.cpp \
   core_read.cpp \
   core_write.cpp \
   hash.cpp \
-  invalid.cpp \
   key.cpp \
   keystore.cpp \
+  netaddress.cpp \
   netbase.cpp \
   protocol.cpp \
   pubkey.cpp \
@@ -410,19 +395,25 @@ libbitcoin_common_a_SOURCES = \
 libbitcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_util_a_SOURCES = \
+  arith_uint256.cpp \
   allocators.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
   compat/glibc_sanity.cpp \
   compat/glibcxx_sanity.cpp \
   compat/strnlen.cpp \
+  fs.cpp \
+  logging.cpp \
   random.cpp \
   rpc/protocol.cpp \
   support/cleanse.cpp \
   sync.cpp \
+  threadinterrupt.cpp \
   uint256.cpp \
+  blob_uint256.cpp \
   util.cpp \
   utilmoneystr.cpp \
+  util/threadnames.cpp \
   utilstrencodings.cpp \
   utiltime.cpp \
   $(BITCOIN_CORE_H)
@@ -432,7 +423,11 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between cryshcoin-cli and cryshcoin-qt
+if GLIBC_BACK_COMPAT
+AM_LDFLAGS += $(COMPAT_LDFLAGS)
+endif
+
+# cli: shared between CRYSH-cli and CRYSH-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -442,21 +437,20 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# cryshcoind binary #
-cryshcoind_SOURCES = cryshcoind.cpp
-cryshcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-cryshcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-cryshcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CRYSHd binary #
+CRYSHd_SOURCES = pivxd.cpp
+CRYSHd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+CRYSHd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CRYSHd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-cryshcoind_SOURCES += cryshcoind-res.rc
+CRYSHd_SOURCES += pivxd-res.rc
 endif
-cryshcoind_LDADD = \
+CRYSHd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_ZEROCOIN) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_ZMQ) \
   $(LIBBITCOIN_CRYPTO) \
@@ -465,52 +459,52 @@ cryshcoind_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-cryshcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+CRYSHd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# cryshcoin-cli binary #
-cryshcoin_cli_SOURCES = cryshcoin-cli.cpp
-cryshcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-cryshcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-cryshcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CRYSH-cli binary #
+CRYSH_cli_SOURCES = pivx-cli.cpp
+CRYSH_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+CRYSH_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CRYSH_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-cryshcoin_cli_SOURCES += cryshcoin-cli-res.rc
+CRYSH_cli_SOURCES += pivx-cli-res.rc
 endif
 
-cryshcoin_cli_LDADD = \
+CRYSH_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-cryshcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+CRYSH_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# cryshcoin-tx binary #
-cryshcoin_tx_SOURCES = cryshcoin-tx.cpp
-cryshcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-cryshcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-cryshcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# CRYSH-tx binary #
+CRYSH_tx_SOURCES = pivx-tx.cpp
+CRYSH_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+CRYSH_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+CRYSH_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-cryshcoin_tx_SOURCES += cryshcoin-tx-res.rc
+CRYSH_tx_SOURCES += pivx-tx-res.rc
 endif
 
-cryshcoin_tx_LDADD = \
+CRYSH_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_ZEROCOIN) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-cryshcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+CRYSH_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
 libbitcoinconsensus_la_SOURCES = \
+  arith_uint256.cpp \
   allocators.cpp \
   primitives/transaction.cpp \
   crypto/hmac_sha512.cpp \
@@ -525,6 +519,7 @@ libbitcoinconsensus_la_SOURCES = \
   script/interpreter.cpp \
   script/bitcoinconsensus.cpp \
   uint256.cpp \
+  blob_uint256.cpp \
   utilstrencodings.cpp
 
 if GLIBC_BACK_COMPAT
@@ -543,8 +538,8 @@ CLEANFILES = $(EXTRA_LIBRARIES)
 
 CLEANFILES += *.gcda *.gcno
 CLEANFILES += compat/*.gcda compat/*.gcno
+CLEANFILES += consensus/*.gcda consensus/*.gcno
 CLEANFILES += crypto/*.gcda crypto/*.gcno
-CLEANFILES += libzerocoin/*.gcda libzerocoin/*.gcno
 CLEANFILES += primitives/*.gcda primitives/*.gcno
 CLEANFILES += rpc/*.gcda rpc/*.gcno
 CLEANFILES += script/*.gcda script/*.gcno
@@ -553,18 +548,23 @@ CLEANFILES += univalue/*.gcda univalue/*.gcno
 CLEANFILES += wallet/*.gcda wallet/*.gcno
 CLEANFILES += wallet/test/*.gcda wallet/test/*.gcno
 CLEANFILES += zmq/*.gcda zmq/*.gcno
-CLEANFILES += zcrysh/*.gcda zcrysh/*.gcno
 CLEANFILES += obj/build.h
 
-EXTRA_DIST =
+CTAES_DIST =  crypto/ctaes/bench.c
+CTAES_DIST += crypto/ctaes/ctaes.c
+CTAES_DIST += crypto/ctaes/ctaes.h
+CTAES_DIST += crypto/ctaes/README.md
+CTAES_DIST += crypto/ctaes/test.c
+
+EXTRA_DIST = $(CTAES_DIST)
 
 
-config/cryshcoin-config.h: config/stamp-h1
+config/pivx-config.h: config/stamp-h1
 	@$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-config/stamp-h1: $(top_srcdir)/$(subdir)/config/cryshcoin-config.h.in $(top_builddir)/config.status
+config/stamp-h1: $(top_srcdir)/$(subdir)/config/pivx-config.h.in $(top_builddir)/config.status
 	$(AM_V_at)$(MAKE) -C $(top_builddir) $(subdir)/$(@)
-$(top_srcdir)/$(subdir)/config/cryshcoin-config.h.in:  $(am__configure_deps)
-	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/cryshcoin-config.h.in
+$(top_srcdir)/$(subdir)/config/pivx-config.h.in:  $(am__configure_deps)
+	$(AM_V_at)$(MAKE) -C $(top_srcdir) $(subdir)/config/pivx-config.h.in
 
 clean-local:
 	-$(MAKE) -C secp256k1 clean
@@ -572,6 +572,7 @@ clean-local:
 	-rm -f leveldb/*/*.gcda leveldb/*/*.gcno leveldb/helpers/memenv/*.gcda leveldb/helpers/memenv/*.gcno
 	-rm -f config.h
 	-rm -rf test/__pycache__
+	-rm -rf ../target
 
 .rc.o:
 	@test -f $(WINDRES)
@@ -595,11 +596,16 @@ endif
 	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(<D) $<
 
 if EMBEDDED_LEVELDB
+include Makefile.crc32c.include
 include Makefile.leveldb.include
 endif
 
 if ENABLE_TESTS
 include Makefile.test.include
+endif
+
+if ENABLE_BENCH
+include Makefile.bench.include
 endif
 
 if ENABLE_QT

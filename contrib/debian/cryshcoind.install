@@ -1,3 +1,0 @@
-usr/local/bin/cryshcoind usr/bin
-usr/local/bin/cryshcoin-cli usr/bin
-debian/examples/cryshcoin.conf etc/cryshcoin

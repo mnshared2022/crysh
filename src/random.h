@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin developers
-// Copyright (c) 2019 The cryshcoin developers
+// Copyright (c) 2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,6 +13,7 @@
 #include "uint256.h"
 
 #include <stdint.h>
+#include <limits>
 
 /* Seed OpenSSL PRNG with additional entropy data */
 void RandAddSeed();
@@ -20,7 +22,7 @@ void RandAddSeed();
  * Functions to gather random data via the OpenSSL PRNG
  */
 void GetRandBytes(unsigned char* buf, int num);
-uint64_t GetRand(uint64_t nMax);
+uint64_t GetRand(uint64_t nMax = std::numeric_limits<uint64_t>::max());
 int GetRandInt(int nMax);
 uint256 GetRandHash();
 

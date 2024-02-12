@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "crysh Coin"
+PROJECT_NAME           = "PIVX Core"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -861,7 +861,8 @@ RECURSIVE              = YES
 # Note that relative paths are relative to the directory from which doxygen is
 # run.
 
-EXCLUDE                = src/leveldb \
+EXCLUDE                = src/crc32c \
+                         src/leveldb \
                          src/json \
                          src/test \
                          src/qt/test
@@ -1265,7 +1266,7 @@ DOCSET_FEEDNAME        = "Doxygen generated docs"
 # The default value is: org.doxygen.Project.
 # This tag requires that the tag GENERATE_DOCSET is set to YES.
 
-DOCSET_BUNDLE_ID       = io.cryshcoin.cryshcoin
+DOCSET_BUNDLE_ID       = io.pivx.PIVX
 
 # The DOCSET_PUBLISHER_ID tag specifies a string that should uniquely identify
 # the documentation publisher. This should be a reverse domain-name style
@@ -1273,7 +1274,7 @@ DOCSET_BUNDLE_ID       = io.cryshcoin.cryshcoin
 # The default value is: org.doxygen.Publisher.
 # This tag requires that the tag GENERATE_DOCSET is set to YES.
 
-DOCSET_PUBLISHER_ID    = io.cryshcoin.cryshcoin
+DOCSET_PUBLISHER_ID    = io.pivx.PIVX
 
 # The DOCSET_PUBLISHER_NAME tag identifies the documentation publisher.
 # The default value is: Publisher.
@@ -2223,29 +2224,29 @@ DOT_FONTSIZE           = 10
 
 DOT_FONTPATH           =
 
-# If the CLASS_GRAPH tag is set to YES then doxygen will generate a graph for
+# If the CLASS_GRCRYSH tag is set to YES then doxygen will generate a graph for
 # each documented class showing the direct and indirect inheritance relations.
 # Setting this tag to YES will force the CLASS_DIAGRAMS tag to NO.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-CLASS_GRAPH            = YES
+CLASS_GRCRYSH            = YES
 
-# If the COLLABORATION_GRAPH tag is set to YES then doxygen will generate a
+# If the COLLABORATION_GRCRYSH tag is set to YES then doxygen will generate a
 # graph for each documented class showing the direct and indirect implementation
 # dependencies (inheritance, containment, and class references variables) of the
 # class with other documented classes.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-COLLABORATION_GRAPH    = YES
+COLLABORATION_GRCRYSH    = YES
 
-# If the GROUP_GRAPHS tag is set to YES then doxygen will generate a graph for
+# If the GROUP_GRCRYSHS tag is set to YES then doxygen will generate a graph for
 # groups, showing the direct groups dependencies.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-GROUP_GRAPHS           = YES
+GROUP_GRCRYSHS           = YES
 
 # If the UML_LOOK tag is set to YES, doxygen will generate inheritance and
 # collaboration diagrams in a style similar to the OMG's Unified Modeling
@@ -2276,25 +2277,25 @@ UML_LIMIT_NUM_FIELDS   = 10
 
 TEMPLATE_RELATIONS     = NO
 
-# If the INCLUDE_GRAPH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are set to
+# If the INCLUDE_GRCRYSH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are set to
 # YES then doxygen will generate a graph for each documented file showing the
 # direct and indirect include dependencies of the file with other documented
 # files.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-INCLUDE_GRAPH          = YES
+INCLUDE_GRCRYSH          = YES
 
-# If the INCLUDED_BY_GRAPH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are
+# If the INCLUDED_BY_GRCRYSH, ENABLE_PREPROCESSING and SEARCH_INCLUDES tags are
 # set to YES then doxygen will generate a graph for each documented file showing
 # the direct and indirect include dependencies of the file with other documented
 # files.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-INCLUDED_BY_GRAPH      = YES
+INCLUDED_BY_GRCRYSH      = YES
 
-# If the CALL_GRAPH tag is set to YES then doxygen will generate a call
+# If the CALL_GRCRYSH tag is set to YES then doxygen will generate a call
 # dependency graph for every global function or class method.
 #
 # Note that enabling this option will significantly increase the time of a run.
@@ -2304,9 +2305,9 @@ INCLUDED_BY_GRAPH      = YES
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-CALL_GRAPH             = YES
+CALL_GRCRYSH             = YES
 
-# If the CALLER_GRAPH tag is set to YES then doxygen will generate a caller
+# If the CALLER_GRCRYSH tag is set to YES then doxygen will generate a caller
 # dependency graph for every global function or class method.
 #
 # Note that enabling this option will significantly increase the time of a run.
@@ -2316,23 +2317,23 @@ CALL_GRAPH             = YES
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-CALLER_GRAPH           = YES
+CALLER_GRCRYSH           = YES
 
-# If the GRAPHICAL_HIERARCHY tag is set to YES then doxygen will graphical
+# If the GRCRYSHICAL_HIERARCHY tag is set to YES then doxygen will graphical
 # hierarchy of all classes instead of a textual one.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-GRAPHICAL_HIERARCHY    = YES
+GRCRYSHICAL_HIERARCHY    = YES
 
-# If the DIRECTORY_GRAPH tag is set to YES then doxygen will show the
+# If the DIRECTORY_GRCRYSH tag is set to YES then doxygen will show the
 # dependencies a directory has on other directories in a graphical way. The
 # dependency relations are determined by the #include relations between the
 # files in the directories.
 # The default value is: YES.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DIRECTORY_GRAPH        = YES
+DIRECTORY_GRCRYSH        = YES
 
 # The DOT_IMAGE_FORMAT tag can be used to set the image format of the images
 # generated by dot. For an explanation of the image formats see the section
@@ -2399,29 +2400,29 @@ PLANTUML_JAR_PATH      =
 
 PLANTUML_INCLUDE_PATH  =
 
-# The DOT_GRAPH_MAX_NODES tag can be used to set the maximum number of nodes
+# The DOT_GRCRYSH_MAX_NODES tag can be used to set the maximum number of nodes
 # that will be shown in the graph. If the number of nodes in a graph becomes
 # larger than this value, doxygen will truncate the graph, which is visualized
 # by representing a node as a red box. Note that doxygen if the number of direct
 # children of the root node in a graph is already larger than
-# DOT_GRAPH_MAX_NODES then the graph will not be shown at all. Also note that
-# the size of a graph can be further restricted by MAX_DOT_GRAPH_DEPTH.
+# DOT_GRCRYSH_MAX_NODES then the graph will not be shown at all. Also note that
+# the size of a graph can be further restricted by MAX_DOT_GRCRYSH_DEPTH.
 # Minimum value: 0, maximum value: 10000, default value: 50.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_GRAPH_MAX_NODES    = 50
+DOT_GRCRYSH_MAX_NODES    = 50
 
-# The MAX_DOT_GRAPH_DEPTH tag can be used to set the maximum depth of the graphs
+# The MAX_DOT_GRCRYSH_DEPTH tag can be used to set the maximum depth of the graphs
 # generated by dot. A depth value of 3 means that only nodes reachable from the
 # root by following a path via at most 3 edges will be shown. Nodes that lay
 # further from the root node will be omitted. Note that setting this option to 1
 # or 2 may greatly reduce the computation time needed for large code bases. Also
 # note that the size of a graph can be further restricted by
-# DOT_GRAPH_MAX_NODES. Using a depth of 0 means no depth restriction.
+# DOT_GRCRYSH_MAX_NODES. Using a depth of 0 means no depth restriction.
 # Minimum value: 0, maximum value: 1000, default value: 0.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-MAX_DOT_GRAPH_DEPTH    = 0
+MAX_DOT_GRCRYSH_DEPTH    = 0
 
 # Set the DOT_TRANSPARENT tag to YES to generate images with a transparent
 # background. This is disabled by default, because dot on Windows does not seem

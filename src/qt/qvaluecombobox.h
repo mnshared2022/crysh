@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,13 +25,13 @@ public:
     /** Specify model role to use as ordinal value (defaults to Qt::UserRole) */
     void setRole(int role);
 
-signals:
+Q_SIGNALS:
     void valueChanged();
 
 private:
     int role;
 
-private slots:
+private Q_SLOTS:
     void handleSelectionChanged(int idx);
 };
 

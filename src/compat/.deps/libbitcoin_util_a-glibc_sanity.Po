@@ -1,82 +1,29 @@
 compat/libbitcoin_util_a-glibc_sanity.o: compat/glibc_sanity.cpp \
-  config/cryshcoin-config.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstddef \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/select.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_def.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timespec.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_time_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_suseconds_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_setsize.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_set.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_clr.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_isset.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_zero.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_copy.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_select.h
-
-config/cryshcoin-config.h:
-
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/cstddef:
-
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../include/c++/v1/__config:
-
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h:
-
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/select.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_def.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timespec.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_time_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_suseconds_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_setsize.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_set.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_clr.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_isset.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_zero.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_fd_copy.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_select.h:
+ config/pivx-config.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/cstddef \
+ /usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/stddef.h \
+ /usr/share/mingw-w64/include/stddef.h \
+ /usr/share/mingw-w64/include/crtdefs.h \
+ /usr/share/mingw-w64/include/corecrt.h \
+ /usr/share/mingw-w64/include/_mingw.h \
+ /usr/share/mingw-w64/include/_mingw_mac.h \
+ /usr/share/mingw-w64/include/_mingw_secapi.h \
+ /usr/share/mingw-w64/include/vadefs.h \
+ /usr/share/mingw-w64/include/sdks/_mingw_ddk.h
+config/pivx-config.h:
+/usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/cstddef:
+/usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/c++config.h:
+/usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
+/usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
+/usr/lib/gcc/x86_64-w64-mingw32/10-posix/include/stddef.h:
+/usr/share/mingw-w64/include/stddef.h:
+/usr/share/mingw-w64/include/crtdefs.h:
+/usr/share/mingw-w64/include/corecrt.h:
+/usr/share/mingw-w64/include/_mingw.h:
+/usr/share/mingw-w64/include/_mingw_mac.h:
+/usr/share/mingw-w64/include/_mingw_secapi.h:
+/usr/share/mingw-w64/include/vadefs.h:
+/usr/share/mingw-w64/include/sdks/_mingw_ddk.h:

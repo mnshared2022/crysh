@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2015-2019 The cryshcoin developers
+// Copyright (c) 2015-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,14 +13,29 @@
 #include "tinyformat.h"
 #include "utilstrencodings.h"
 #include "util.h"
-#include <crypto/common.h>
-#include <crypto/scrypt.h>
 
 uint256 CBlockHeader::GetHash() const
 {
-    uint256 thash;
-    scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(thash));
-    return thash;
+    if (nVersion == 1)
+        return HashQuark(BEGIN(nVersion), END(nNonce));
+
+     if (nVersion < 4)  { // nVersion = 1, 2, 3
+#if defined(WORDS_BIGENDIAN)
+        uint8_t data[80];
+        WriteLE32(&data[0], nVersion);
+        memcpy(&data[4], hashPrevBlock.begin(), hashPrevBlock.size());
+        memcpy(&data[36], hashMerkleRoot.begin(), hashMerkleRoot.size());
+        WriteLE32(&data[68], nTime);
+        WriteLE32(&data[72], nBits);
+        WriteLE32(&data[76], nNonce);
+
+        return HashQuark(data, data + 80);
+#else // Can take shortcut for little endian
+        return HashQuark(BEGIN(nVersion), END(nNonce));
+#endif
+    }
+	
+    return SerializeHash(*this); // nVersion >= 4
 }
 
 std::string CBlock::ToString() const
@@ -42,9 +58,4 @@ std::string CBlock::ToString() const
 void CBlock::print() const
 {
     LogPrintf("%s", ToString());
-}
-
-bool CBlock::IsZerocoinStake() const
-{
-    return IsProofOfStake() && vtx[1].HasZerocoinSpendInputs();
 }

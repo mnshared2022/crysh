@@ -1,4 +1,4 @@
-Source: cryshcoin
+Source: CRYSH
 Section: utils
 Priority: optional
 Maintainer: Fuzzbawls <fuzzbawls@gmail.com>
@@ -28,37 +28,37 @@ Build-Depends: debhelper,
  libzmq3-dev,
  dh-systemd
 Standards-Version: 3.9.2
-Homepage: http://www.crysh.online
-Vcs-Git: git://github.com/cryshcoin/cryshcoin.git
-Vcs-Browser: http://github.com/cryshcoin/cryshcoin
+Homepage: https://www.crysh/
+Vcs-Git: git:github.com/CRYSH/CRYSH.git
+Vcs-Browser: https://github.com/mnshared2022/CRYSH/
 
-Package: cryshcoind
+Package: CRYSHd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- cryshcoin is a free open source peer-to-peer electronic cash system that
+ CRYSH is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
- This package provides the daemon, cryshcoind, and the CLI tool
- cryshcoin-cli to interact with the daemon.
+ This package provides the daemon, CRYSHd, and the CLI tool
+ CRYSH-cli to interact with the daemon.
 
-Package: cryshcoin-qt
+Package: CRYSH-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- cryshcoin is a free open source peer-to-peer electronic cash system that
+ CRYSH is a free, open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
  Full transaction history is stored locally at each client.  This
- requires 10+ GB of space, slowly growing.
+ requires 18.5+ GB of space, slowly growing.
  .
- This package provides cryshcoin-Qt, a GUI for cryshcoin based on Qt.
+ This package provides CRYSH-Qt, a GUI for CRYSH based on Qt.

@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package cryshcoind/cryshcoin-qt
-for Debian-based Linux systems. If you compile cryshcoind/cryshcoin-qt yourself, there are some useful files here.
+This directory contains files used to package CRYSHd/CRYSH-qt
+for Debian-based Linux systems. If you compile CRYSHd/CRYSH-qt yourself, there are some useful files here.
 
-## cryshcoin: URI support ##
+## pivx: URI support ##
 
 
-cryshcoin-qt.desktop  (Gnome / Open Desktop)
+CRYSH-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install cryshcoin-qt.desktop
+	sudo desktop-file-install CRYSH-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your cryshcoin-qt binary to `/usr/bin`
-and the `../../share/pixmaps/cryshcoin128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your CRYSH-qt binary to `/usr/bin`
+and the `../../share/pixmaps/pivx128.png` to `/usr/share/pixmaps`
 
-cryshcoin-qt.protocol (KDE)
+CRYSH-qt.protocol (KDE)
 

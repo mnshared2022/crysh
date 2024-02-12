@@ -1,5 +1,6 @@
 // Copyright (c) 2014 The Bitcoin developers
-// Copyright (c) 2017-2019 The cryshcoin developers
+// Copyright (c) 2017-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,8 +11,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between cryshcoin-cli and cryshcoind)
- * of a given instance of the cryshcoin system.
+ * CBaseChainParams defines the base parameters (shared between CRYSH-cli and CRYSHd)
+ * of a given instance of the CRYSH system.
  */
 class CBaseChainParams
 {
@@ -20,7 +21,6 @@ public:
         MAIN,
         TESTNET,
         REGTEST,
-        UNITTEST,
 
         MAX_NETWORK_TYPES
     };
@@ -41,6 +41,11 @@ protected:
  * outside of the unit tests.
  */
 const CBaseChainParams& BaseParams();
+
+/**
+ * Return parameters for the given network.
+ */
+CBaseChainParams& BaseParams(CBaseChainParams::Network network);
 
 /** Sets the params returned by Params() to those for the given network. */
 void SelectBaseParams(CBaseChainParams::Network network);

@@ -1,9 +1,10 @@
 // Copyright (c) 2011-2013 The Bitcoin Core developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "utilstrencodings.h"
-#include "test/test_cryshcoin.h"
+#include "test/test_pivx.h"
 
 #include <boost/test/unit_test.hpp>
 

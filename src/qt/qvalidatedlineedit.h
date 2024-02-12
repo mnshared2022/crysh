@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,11 +28,11 @@ private:
     bool valid;
     const QValidator* checkValidator;
 
-public slots:
+public Q_SLOTS:
     void setValid(bool valid);
     void setEnabled(bool enabled);
 
-private slots:
+private Q_SLOTS:
     void markValid();
     void checkValidity();
 };

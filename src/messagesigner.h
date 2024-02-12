@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2018 The Dash Core developers
-// Copyright (c) 2018-2019 The cryshcoin developers
+// Copyright (c) 2018-2020 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -67,10 +68,10 @@ public:
     virtual ~CSignedMessage() {};
 
     // Sign-Verify message
-    bool Sign(const CKey& key, const CPubKey& pubKey, const bool fNewSigs);
-    bool Sign(const std::string strSignKey, const bool fNewSigs);
+    bool Sign(const CKey& key, const CPubKey& pubKey);
+    bool Sign(const std::string strSignKey);
     bool CheckSignature(const CPubKey& pubKey) const;
-    bool CheckSignature(const bool fSignatureCheck = true) const;
+    bool CheckSignature() const;
 
     // Pure virtual functions (used in Sign-Verify functions)
     // Must be implemented in child classes

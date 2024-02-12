@@ -1,203 +1,185 @@
 crypto/crypto_libbitcoin_crypto_a-ripemd160.o: crypto/ripemd160.cpp \
-  crypto/ripemd160.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdlib.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/wait.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_pid_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_id_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/signal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_mcontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_mcontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/mach/i386/_structs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigaltstack.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ucontext.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uid_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/resource.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_endian.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/_OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/_OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/alloca.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rune_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wchar_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_dev_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mode_t.h \
-  crypto/common.h config/cryshcoin-config.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h \
-  compat/endian.h compat/byteswap.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/OSByteOrder.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_os_inline.h
+ /usr/include/stdc-predef.h crypto/ripemd160.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/7/stdlib.h /usr/include/c++/7/cstdlib \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
+ /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h \
+ /usr/include/stdlib.h /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/c++/7/bits/std_abs.h crypto/common.h config/pivx-config.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h compat/endian.h \
+ compat/byteswap.h /usr/include/byteswap.h
+
+/usr/include/stdc-predef.h:
 
 crypto/ripemd160.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h:
+/usr/include/stdint.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h:
+/usr/include/features.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h:
+/usr/include/c++/7/stdlib.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h:
+/usr/include/c++/7/cstdlib:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h:
+/usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h:
+/usr/include/stdlib.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdlib.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/wait.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_pid_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_id_t.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/signal.h:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/appleapiopts.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/signal.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/signal.h:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_mcontext.h:
+/usr/include/endian.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_mcontext.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/mach/i386/_structs.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigaltstack.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ucontext.h:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uid_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/resource.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_timeval.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/endian.h:
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/endian.h:
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_endian.h:
+/usr/include/x86_64-linux-gnu/bits/sysmacros.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/_OSByteOrder.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/_OSByteOrder.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/alloca.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ct_rune_t.h:
+/usr/include/alloca.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rune_t.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_wchar_t.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/types.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_dev_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_mode_t.h:
+/usr/include/c++/7/bits/std_abs.h:
 
 crypto/common.h:
 
-config/cryshcoin-config.h:
+config/pivx-config.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h:
+/usr/include/string.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h:
+/usr/include/strings.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h:
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
 compat/endian.h:
 
 compat/byteswap.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/OSByteOrder.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/libkern/i386/OSByteOrder.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_os_inline.h:
+/usr/include/byteswap.h:

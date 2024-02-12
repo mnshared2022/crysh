@@ -1,129 +1,88 @@
 crypto/crypto_libbitcoin_crypto_a-bmw.o: crypto/bmw.c \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rsize_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_errno_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/secure/_string.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/secure/_common.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_limits.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/syslimits.h \
-  crypto/sph_bmw.h crypto/sph_types.h \
-  /root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h \
-  /root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h
+ /usr/include/stdc-predef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h crypto/sph_bmw.h \
+ crypto/sph_types.h /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h \
+ /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stddef.h:
+/usr/include/stdc-predef.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/__stddef_max_align_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/string.h:
+/usr/include/string.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types.h:
+/usr/include/features.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/cdefs.h:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_symbol_aliasing.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_posix_availability.h:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/_types.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_types.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_pthread/_pthread_types.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/Availability.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/AvailabilityInternal.h:
+/usr/include/strings.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_size_t.h:
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_null.h:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_rsize_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_errno_t.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_ssize_t.h:
+/usr/include/limits.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/strings.h:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/secure/_string.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/secure/_common.h:
+/usr/include/linux/limits.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/limits.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/limits.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/machine/limits.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/limits.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/i386/_limits.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 crypto/sph_bmw.h:
 
 crypto/sph_types.h:
 
-/root/crysh/depends/x86_64-apple-darwin14/native/bin/../lib/clang/3.7.1/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/stdint.h:
+/usr/include/stdint.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int8_t.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int16_t.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int32_t.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_int64_t.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint8_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint16_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint32_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uint64_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_intptr_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/sys/_types/_uintptr_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_intmax_t.h:
-
-/root/crysh/depends/SDKs/MacOSX10.11.sdk/usr/include/_types/_uintmax_t.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:

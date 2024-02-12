@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2018 The cryshcoin developers
+// Copyright (c) 2015-2018 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,7 +14,7 @@ static const int MODEL_UPDATE_DELAY = 1000;
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* cryshcoin GUI -- Size of icons in status bar */
+/* CRYSH GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -29,12 +30,10 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_BAREADDRESS QColor(140, 140, 140)
 /* Transaction list -- TX status decoration - open until date */
 #define COLOR_TX_STATUS_OPENUNTILDATE QColor(64, 64, 255)
-/* Transaction list -- TX status decoration - offline */
-#define COLOR_TX_STATUS_OFFLINE QColor(192, 192, 192)
 /* Transaction list -- TX status decoration - default color */
 #define COLOR_BLACK QColor(51, 51, 51)
 /* Transaction list -- TX status decoration - conflicted */
-#define COLOR_CONFLICTED QColor(255, 0, 0)
+#define COLOR_CONFLICTED QColor(227, 147, 95)
 /* Transaction list -- TX status decoration - orphan (Light Gray #D3D3D3) */
 #define COLOR_ORPHAN QColor(211, 211, 211)
 /* Transaction list -- TX status decoration - stake (BlueViolet #8A2BE2) */
@@ -50,12 +49,10 @@ static const int MAX_URI_LENGTH = 255;
 /* QRCodeDialog -- size of exported QR Code image */
 #define EXPORT_IMAGE_SIZE 256
 
-/* Number of frames in spinner animation */
-#define SPINNER_FRAMES 35
 
-#define QAPP_ORG_NAME "cryshcoin"
-#define QAPP_ORG_DOMAIN "crysh.online"
-#define QAPP_APP_NAME_DEFAULT "cryshcoin-Qt"
-#define QAPP_APP_NAME_TESTNET "cryshcoin-Qt-testnet"
+#define QAPP_ORG_NAME "CRYSH"
+#define QAPP_ORG_DOMAIN "CRYSH.org"
+#define QAPP_APP_NAME_DEFAULT "CRYSH-Qt"
+#define QAPP_APP_NAME_TESTNET "CRYSH-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

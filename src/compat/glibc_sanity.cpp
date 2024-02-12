@@ -1,10 +1,11 @@
 // Copyright (c) 2009-2017 The Bitcoin Core developers
-// Copyright (c) 2016-2019 The cryshcoin developers
+// Copyright (c) 2016-2019 The PIVX developers
+// Copyright (c) 2021-2023 The CRYSH Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/cryshcoin-config.h"
+#include "config/pivx-config.h"
 #endif
 
 #include <cstddef>
