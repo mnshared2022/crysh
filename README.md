@@ -3,7 +3,9 @@
 <p>
 
 (You can buy CRYSH from exchange for collateral) <br>
-<br>  Graviex<br>
+<br> https://graviex.net/markets/cryshusdt <br>
+<br> https://graviex.net/markets/cryshbtc <br>
+<br> https://graviex.net/markets/crysheth <br>
 
 
 <h2><strong>Specification:</strong></h2>
