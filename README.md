@@ -11,7 +11,7 @@
 <tbody>
 <tr>
 <td>Masternode Collateral</td>
-<td>100000 CRYSH</td>
+<td>150000 CRYSH</td>
 </tr>
 <tr>
 <td>Coin Name & Ticker</td>
