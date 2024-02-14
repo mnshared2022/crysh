@@ -27,7 +27,7 @@
 </tr>
 <tr>
 <td>Maximum Supply</td>
-<td>120 000 000 CRYSH</td>
+<td>1 000 000 000 CRYSH</td>
 </tr>
 <tr>
 <td>Minimum Stake Age</td>
