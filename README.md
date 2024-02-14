@@ -35,7 +35,7 @@
 </tr>
 <tr>
 <td>Rewardstructure</td>
-<td>70 % Masternode Rewards & 30 % Staking Rewards</td>
+<td>80 % Masternode Rewards & 20 % Staking Rewards</td>
 </tr>
 <tr>
 <td>Coin Maturity</td>
