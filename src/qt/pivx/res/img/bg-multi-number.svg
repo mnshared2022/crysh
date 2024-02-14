@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="svg9"
+   x="0px"
+   y="0px"
+   viewBox="0 0 24 24"
+   style="enable-background:new 0 0 24 24;"
+   xml:space="preserve"
+   sodipodi:docname="bg-multi-number.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs22" /><sodipodi:namedview
+   id="namedview20"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="9.8333333"
+   inkscape:cx="-7.6271186"
+   inkscape:cy="12"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Top-BarTheme-Copy" />
+<style
+   type="text/css"
+   id="style13">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#ce621c;stroke-width:1.5154;}
+</style>
+<desc
+   id="desc4">Created with Sketch.</desc>
+<g
+   id="Top-BarTheme-Copy">
+	<circle
+   id="Oval"
+   class="st0"
+   cx="12"
+   cy="12"
+   r="12" />
+	<path
+   id="Path_18926"
+   class="st1"
+   d="M12.1,2.8c-5,0-9.1,4.1-9.1,9.1S7.1,21,12.1,21s9.1-4.1,9.1-9.1c0-2.4-1-4.7-2.7-6.4   S14.5,2.8,12.1,2.8z"
+   style="stroke:#5e6661;stroke-opacity:1" />
+</g>
+</svg>

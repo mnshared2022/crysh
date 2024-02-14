@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=CRYSH
+Comment= CRYSH P2P Cryptocurrency
+Comment[fr]= CRYSH, monnaie virtuelle cryptographique pair à pair
+Comment[tr]= CRYSH, eşten eşe kriptografik sanal para birimi
+Exec=CRYSH-qt %u
+Terminal=false
+Type=Application
+Icon=pivx128
+MimeType=x-scheme-handler/pivx;
+Categories=Office;Finance;
+StartupWMClass=CRYSH-qt
